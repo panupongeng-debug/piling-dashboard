@@ -10,7 +10,7 @@ import webbrowser
 import os
 import time
 
-PORT = 8000
+PORT = 3000
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
