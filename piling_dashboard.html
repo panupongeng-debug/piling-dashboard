@@ -30,13 +30,21 @@
         .card .pct { font-size: 12px; color: #999; margin-top: 5px; }
         .section { background: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
         .section h2 { color: white; background: #003d82; font-size: 13px; margin: -20px -20px 15px -20px; padding: 12px 20px; text-transform: uppercase; font-weight: 600; }
+        .filters { background: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .filter-section { margin-bottom: 20px; }
+        .filter-section h4 { color: #003d82; font-size: 12px; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+        .tag { padding: 6px 12px; background: #f0f2f5; border: 1px solid #d0d5dd; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+        .tag:hover { border-color: #003d82; background: #e8f0fa; }
+        .tag.active { background: #003d82; color: white; border-color: #003d82; }
         .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 20px; }
         .chart-box { position: relative; height: 320px; background: white; padding: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
         .badge { padding: 4px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; display: inline-block; }
-        .badge.completed { background: #d5f4e6; color: #27ae60; }
-        .badge.pending { background: #fef5e7; color: #f39c12; }
         .badge.defected { background: #fadbd8; color: #e74c3c; }
         #dashboard { display: none; }
+        .date-item { display: inline-block; margin-right: 15px; }
+        .date-item label { font-size: 11px; font-weight: 600; color: #999; display: block; margin-bottom: 5px; text-transform: uppercase; }
+        .date-item input { width: 150px; padding: 8px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -77,6 +85,46 @@
                 </div>
             </div>
 
+            <div class="filters">
+                <h2 style="margin: -20px -20px 15px -20px; padding: 12px 20px; color: white; background: #003d82; text-transform: uppercase; font-size: 13px; font-weight: 600;">Filter Data</h2>
+
+                <div class="filter-section">
+                    <h4>📅 Date Range</h4>
+                    <div class="date-item">
+                        <label>From Date</label>
+                        <input type="date" id="dateFrom" onchange="applyFilters()">
+                    </div>
+                    <div class="date-item">
+                        <label>To Date</label>
+                        <input type="date" id="dateTo" onchange="applyFilters()">
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>🗺️ Zone</h4>
+                    <div class="tag-container" id="areaTags"></div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>⚙️ Rig</h4>
+                    <div class="tag-container" id="rigTags"></div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>🔧 Type</h4>
+                    <div class="tag-container" id="typeTags"></div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>✅ Status</h4>
+                    <div class="tag-container" id="statusTags"></div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <button class="btn" onclick="resetFilters()" style="background: #6c757d;">🔄 Reset All</button>
+                </div>
+            </div>
+
             <div class="charts">
                 <div class="chart-box"><canvas id="barChart"></canvas></div>
                 <div class="chart-box"><canvas id="pieChart"></canvas></div>
@@ -96,7 +144,12 @@
 
     <script>
         let PILE_DATA = [];
+        let filtered = [];
         let charts = {};
+        let selectedAreas = [];
+        let selectedRigs = [];
+        let selectedTypes = [];
+        let selectedStatus = '';
 
         async function loadJsonAndRefresh() {
             try {
@@ -108,16 +161,19 @@
                 PILE_DATA = await response.json();
                 console.log(`✅ Loaded ${PILE_DATA.length} records`);
                 
+                filtered = [...PILE_DATA];
+                
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('errorMsg').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'block';
                 
+                initFilters();
                 updateCharts();
             } catch (error) {
                 console.error("Error:", error);
                 const errorDiv = document.getElementById('errorMsg');
                 errorDiv.style.display = 'block';
-                errorDiv.innerHTML = `❌ Error loading JSON: ${error.message}<br><small>File: D:\\Daily Report\\Data\\pile_data.json</small>`;
+                errorDiv.innerHTML = `❌ Error loading JSON: ${error.message}<br><small>File: Data/pile_data.json</small>`;
                 document.getElementById('loading').style.display = 'none';
             }
         }
@@ -126,11 +182,104 @@
             alert('📊 Run this command in Command Prompt:\npython update_pile_dashboard.py\n\nThen click Refresh button');
         }
 
+        function initFilters() {
+            const areas = [...new Set(PILE_DATA.map(p => p.area).filter(a => a))].sort();
+            const rigs = [...new Set(PILE_DATA.map(p => p.rig).filter(r => r))].sort((a,b) => a-b).map(r => 'Rig ' + r);
+            const types = [...new Set(PILE_DATA.map(p => p.type).filter(t => t))].sort();
+            const dates = [...new Set(PILE_DATA.map(p => p.piled_date).filter(d => d))].sort();
+
+            createTagElements('areaTags', areas, 'area');
+            createTagElements('rigTags', rigs, 'rig');
+            createTagElements('typeTags', types, 'type');
+            createTagElements('statusTags', ['Completed', 'Pending', 'Defected'], 'status');
+
+            if (dates.length > 0) {
+                document.getElementById('dateFrom').value = dates[0];
+                document.getElementById('dateTo').value = dates[dates.length - 1];
+            }
+        }
+
+        function createTagElements(containerId, values, filterType) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            values.forEach(val => {
+                const tag = document.createElement('div');
+                tag.className = 'tag';
+                tag.textContent = val;
+                tag.onclick = () => toggleTag(tag, val, filterType);
+                container.appendChild(tag);
+            });
+        }
+
+        function toggleTag(tagElement, value, filterType) {
+            tagElement.classList.toggle('active');
+
+            if (filterType === 'area') {
+                if (selectedAreas.includes(value)) {
+                    selectedAreas = selectedAreas.filter(a => a !== value);
+                } else {
+                    selectedAreas.push(value);
+                }
+            } else if (filterType === 'rig') {
+                if (selectedRigs.includes(value)) {
+                    selectedRigs = selectedRigs.filter(r => r !== value);
+                } else {
+                    selectedRigs.push(value);
+                }
+            } else if (filterType === 'type') {
+                if (selectedTypes.includes(value)) {
+                    selectedTypes = selectedTypes.filter(t => t !== value);
+                } else {
+                    selectedTypes.push(value);
+                }
+            } else if (filterType === 'status') {
+                if (selectedStatus === value) {
+                    selectedStatus = '';
+                    tagElement.classList.remove('active');
+                } else {
+                    document.querySelectorAll('#statusTags .tag').forEach(t => t.classList.remove('active'));
+                    selectedStatus = value;
+                    tagElement.classList.add('active');
+                }
+            }
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const dateFrom = document.getElementById('dateFrom').value;
+            const dateTo = document.getElementById('dateTo').value;
+
+            filtered = PILE_DATA.filter(p => {
+                if (dateFrom && p.piled_date < dateFrom) return false;
+                if (dateTo && p.piled_date > dateTo) return false;
+                if (selectedAreas.length > 0 && !selectedAreas.includes(p.area)) return false;
+                if (selectedRigs.length > 0 && !selectedRigs.includes('Rig ' + p.rig)) return false;
+                if (selectedTypes.length > 0 && !selectedTypes.includes(p.type)) return false;
+                if (selectedStatus && p.status !== selectedStatus) return false;
+                return true;
+            });
+
+            updateCharts();
+        }
+
+        function resetFilters() {
+            document.getElementById('dateFrom').value = '';
+            document.getElementById('dateTo').value = '';
+            document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+            selectedAreas = [];
+            selectedRigs = [];
+            selectedTypes = [];
+            selectedStatus = '';
+            filtered = [...PILE_DATA];
+            updateCharts();
+        }
+
         function updateStats() {
-            const total = PILE_DATA.length;
-            const completed = PILE_DATA.filter(p => p.status === 'Completed').length;
-            const pending = PILE_DATA.filter(p => p.status === 'Pending').length;
-            const defected = PILE_DATA.filter(p => p.status === 'Defected').length;
+            const total = filtered.length;
+            const completed = filtered.filter(p => p.status === 'Completed').length;
+            const pending = filtered.filter(p => p.status === 'Pending').length;
+            const defected = filtered.filter(p => p.status === 'Defected').length;
 
             document.getElementById('total').textContent = total;
             document.getElementById('completed').textContent = completed;
@@ -144,7 +293,7 @@
             updateStats();
 
             const zones = {};
-            PILE_DATA.forEach(p => {
+            filtered.forEach(p => {
                 if (!zones[p.area]) zones[p.area] = {total: 0, completed: 0};
                 zones[p.area].total++;
                 if (p.status === 'Completed') zones[p.area].completed++;
@@ -167,9 +316,9 @@
                 options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
             });
 
-            const completed = PILE_DATA.filter(p => p.status === 'Completed').length;
-            const pending = PILE_DATA.filter(p => p.status === 'Pending').length;
-            const defected = PILE_DATA.filter(p => p.status === 'Defected').length;
+            const completed = filtered.filter(p => p.status === 'Completed').length;
+            const pending = filtered.filter(p => p.status === 'Pending').length;
+            const defected = filtered.filter(p => p.status === 'Defected').length;
 
             if (charts.pie) charts.pie.destroy();
             charts.pie = new Chart(document.getElementById('pieChart'), {
@@ -185,7 +334,7 @@
             });
 
             const byDate = {};
-            PILE_DATA.filter(p => p.piled_date).forEach(p => {
+            filtered.filter(p => p.piled_date).forEach(p => {
                 byDate[p.piled_date] = (byDate[p.piled_date] || 0) + 1;
             });
 
@@ -225,7 +374,7 @@
                 options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
             });
 
-            const issues = PILE_DATA.filter(p => p.status === 'Defected').slice(0, 50);
+            const issues = filtered.filter(p => p.status === 'Defected').slice(0, 50);
             const tData = issues.map(p => [
                 p.pile_number,
                 p.area,
