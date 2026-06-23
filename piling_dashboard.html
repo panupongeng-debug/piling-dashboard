@@ -45,6 +45,10 @@
         .date-item { display: inline-block; margin-right: 15px; }
         .date-item label { font-size: 11px; font-weight: 600; color: #999; display: block; margin-bottom: 5px; text-transform: uppercase; }
         .date-item input { width: 150px; padding: 8px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 13px; }
+        .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px; }
+        .geo-stat { background: #f8f9fa; padding: 15px; border-radius: 4px; border-left: 3px solid #003d82; }
+        .geo-stat h4 { color: #003d82; font-size: 13px; margin-bottom: 8px; font-weight: 600; }
+        .geo-stat .big { font-size: 24px; font-weight: bold; color: #003d82; }
     </style>
 </head>
 <body>
@@ -85,6 +89,21 @@
                 </div>
             </div>
 
+            <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+                <div class="card">
+                    <h3>Avg Length (m)</h3>
+                    <div class="value" id="avgLength">-</div>
+                </div>
+                <div class="card">
+                    <h3>Min Length (m)</h3>
+                    <div class="value" id="minLength">-</div>
+                </div>
+                <div class="card">
+                    <h3>Max Length (m)</h3>
+                    <div class="value" id="maxLength">-</div>
+                </div>
+            </div>
+
             <div class="filters">
                 <h2 style="margin: -20px -20px 15px -20px; padding: 12px 20px; color: white; background: #003d82; text-transform: uppercase; font-size: 13px; font-weight: 600;">Filter Data</h2>
 
@@ -116,6 +135,11 @@
                 </div>
 
                 <div class="filter-section">
+                    <h4>📏 Size</h4>
+                    <div class="tag-container" id="sizeTags"></div>
+                </div>
+
+                <div class="filter-section">
                     <h4>✅ Status</h4>
                     <div class="tag-container" id="statusTags"></div>
                 </div>
@@ -136,6 +160,30 @@
             </div>
 
             <div class="section">
+                <h2>Geographic Distribution (1:1 Ratio)</h2>
+                <div style="width: 100%; height: 600px; background: white; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
+                    <canvas id="geoChart" style="max-width: 100%; max-height: 100%;"></canvas>
+                </div>
+                <div class="geo-grid">
+                    <div class="geo-stat">
+                        <h4>N Range</h4>
+                        <div class="big" id="nRange">-</div>
+                        <div style="font-size: 12px; color: #999;">Min - Max (meters)</div>
+                    </div>
+                    <div class="geo-stat">
+                        <h4>E Range</h4>
+                        <div class="big" id="eRange">-</div>
+                        <div style="font-size: 12px; color: #999;">Min - Max (meters)</div>
+                    </div>
+                    <div class="geo-stat">
+                        <h4>Avg Area Coverage</h4>
+                        <div class="big" id="avgCoverage">-</div>
+                        <div style="font-size: 12px; color: #999;">Square meters</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
                 <h2>Issues - Defected Piles</h2>
                 <div id="issueTable"></div>
             </div>
@@ -149,6 +197,7 @@
         let selectedAreas = [];
         let selectedRigs = [];
         let selectedTypes = [];
+        let selectedSizes = [];
         let selectedStatus = '';
 
         async function loadJsonAndRefresh() {
@@ -191,6 +240,8 @@
             createTagElements('areaTags', areas, 'area');
             createTagElements('rigTags', rigs, 'rig');
             createTagElements('typeTags', types, 'type');
+            const sizes = [...new Set(PILE_DATA.map(p => p.size).filter(s => s))].sort();
+            createTagElements('sizeTags', sizes, 'size');
             createTagElements('statusTags', ['Completed', 'Pending', 'Defected'], 'status');
 
             if (dates.length > 0) {
@@ -232,6 +283,12 @@
                 } else {
                     selectedTypes.push(value);
                 }
+            } else if (filterType === 'size') {
+                if (selectedSizes.includes(value)) {
+                    selectedSizes = selectedSizes.filter(s => s !== value);
+                } else {
+                    selectedSizes.push(value);
+                }
             } else if (filterType === 'status') {
                 if (selectedStatus === value) {
                     selectedStatus = '';
@@ -256,6 +313,7 @@
                 if (selectedAreas.length > 0 && !selectedAreas.includes(p.area)) return false;
                 if (selectedRigs.length > 0 && !selectedRigs.includes('Rig ' + p.rig)) return false;
                 if (selectedTypes.length > 0 && !selectedTypes.includes(p.type)) return false;
+                if (selectedSizes.length > 0 && !selectedSizes.includes(String(p.size))) return false;
                 if (selectedStatus && p.status !== selectedStatus) return false;
                 return true;
             });
@@ -287,6 +345,16 @@
             document.getElementById('pending').textContent = pending;
             document.getElementById('pendingPct').textContent = total > 0 ? Math.round(pending*100/total) + '%' : '0%';
             document.getElementById('defected').textContent = defected;
+
+            const lengths = filtered.filter(p => p.actual_length).map(p => p.actual_length);
+            if (lengths.length > 0) {
+                const avg = (lengths.reduce((a,b) => a+b, 0) / lengths.length).toFixed(2);
+                const min = Math.min(...lengths).toFixed(2);
+                const max = Math.max(...lengths).toFixed(2);
+                document.getElementById('avgLength').textContent = avg;
+                document.getElementById('minLength').textContent = min;
+                document.getElementById('maxLength').textContent = max;
+            }
         }
 
         function updateCharts() {
@@ -373,6 +441,54 @@
                 },
                 options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
             });
+
+            const geoData = filtered.filter(p => p.piled_date && p.n && p.e).map(p => ({
+                area: p.area,
+                n: parseFloat(p.n),
+                e: parseFloat(p.e),
+                status: p.status
+            }));
+
+            const areaColors = {'WHA': '#e74c3c', 'WHB': '#003d82', 'ROD': '#27ae60'};
+
+            if (charts.geo) charts.geo.destroy();
+            const datasets = [];
+            Object.keys(zones).forEach(area => {
+                const areaGeo = geoData.filter(p => p.area === area);
+                datasets.push({
+                    label: area,
+                    data: areaGeo.map(p => ({x: p.e, y: p.n})),
+                    backgroundColor: areaColors[area] || '#95a5a6',
+                    radius: 4
+                });
+            });
+
+            charts.geo = new Chart(document.getElementById('geoChart'), {
+                type: 'scatter',
+                data: {datasets: datasets},
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 1,
+                    plugins: {legend: {position: 'top'}},
+                    scales: {
+                        x: {title: {display: true, text: 'East (E) Coordinate'}},
+                        y: {title: {display: true, text: 'North (N) Coordinate'}}
+                    }
+                }
+            });
+
+            if (geoData.length > 0) {
+                const ns = geoData.map(p => p.n).sort((a,b) => a-b);
+                const es = geoData.map(p => p.e).sort((a,b) => a-b);
+                const nRange = (Math.max(...ns) - Math.min(...ns)).toFixed(2);
+                const eRange = (Math.max(...es) - Math.min(...es)).toFixed(2);
+                const coverage = (nRange * eRange).toFixed(0);
+
+                document.getElementById('nRange').textContent = nRange + 'm';
+                document.getElementById('eRange').textContent = eRange + 'm';
+                document.getElementById('avgCoverage').textContent = coverage + 'm²';
+            }
 
             const issues = filtered.filter(p => p.status === 'Defected').slice(0, 50);
             const tData = issues.map(p => [
