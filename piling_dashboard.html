@@ -9,46 +9,156 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; padding: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; padding: 15px; }
         .container { max-width: 1600px; margin: 0 auto; }
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; gap: 20px; padding: 20px; background: white; border-top: 4px solid #003d82; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .logo { height: 70px; }
-        .header-title { flex: 1; }
-        .header-title h1 { color: #003d82; font-size: 28px; margin: 0; font-weight: 600; }
-        .header-title p { color: #666; font-size: 12px; margin-top: 5px; }
-        .header-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        .btn { padding: 10px 20px; background: #003d82; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; }
+        
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 20px; 
+            gap: 10px; 
+            padding: 15px; 
+            background: white; 
+            border-top: 4px solid #003d82; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+        .logo { height: 50px; }
+        .header-title { flex: 1; min-width: 150px; }
+        .header-title h1 { color: #003d82; font-size: clamp(18px, 5vw, 28px); margin: 0; font-weight: 600; }
+        .header-title p { color: #666; font-size: 11px; margin-top: 3px; }
+        .header-right { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        
+        .btn { 
+            padding: 8px 12px; 
+            background: #003d82; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: clamp(11px, 2.5vw, 13px);
+            white-space: nowrap;
+        }
         .btn:hover { background: #002850; }
         .btn-update { background: #27ae60; }
         .btn-update:hover { background: #229954; }
-        .loading { text-align: center; padding: 40px; color: #999; font-size: 14px; }
-        .error { color: #e74c3c; padding: 20px; background: #fadbd8; border-radius: 4px; margin-bottom: 20px; display: none; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .card { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
-        .card h3 { font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
-        .card .value { font-size: 32px; font-weight: bold; color: #003d82; }
-        .card .pct { font-size: 12px; color: #999; margin-top: 5px; }
-        .section { background: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
-        .section h2 { color: white; background: #003d82; font-size: 13px; margin: -20px -20px 15px -20px; padding: 12px 20px; text-transform: uppercase; font-weight: 600; }
-        .filters { background: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
-        .filter-section { margin-bottom: 20px; }
-        .filter-section h4 { color: #003d82; font-size: 12px; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
-        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-        .tag { padding: 6px 12px; background: #f0f2f5; border: 1px solid #d0d5dd; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+        
+        .loading { text-align: center; padding: 20px; color: #999; font-size: 14px; }
+        .error { color: #e74c3c; padding: 15px; background: #fadbd8; border-radius: 4px; margin-bottom: 20px; display: none; font-size: 13px; }
+        
+        .cards { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+            gap: 10px; 
+            margin-bottom: 20px; 
+        }
+        .card { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 4px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            border-top: 3px solid #003d82; 
+        }
+        .card h3 { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+        .card .value { font-size: clamp(20px, 6vw, 32px); font-weight: bold; color: #003d82; }
+        .card .pct { font-size: 11px; color: #999; margin-top: 5px; }
+        
+        .section { background: white; padding: 15px; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .section h2 { color: white; background: #003d82; font-size: 12px; margin: -15px -15px 12px -15px; padding: 10px 15px; text-transform: uppercase; font-weight: 600; }
+        
+        .filters { background: white; padding: 15px; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .filter-section { margin-bottom: 15px; }
+        .filter-section h4 { color: #003d82; font-size: 11px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+        .tag { padding: 5px 10px; background: #f0f2f5; border: 1px solid #d0d5dd; border-radius: 15px; cursor: pointer; font-size: 12px; transition: all 0.2s; }
         .tag:hover { border-color: #003d82; background: #e8f0fa; }
         .tag.active { background: #003d82; color: white; border-color: #003d82; }
-        .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 20px; }
-        .chart-box { position: relative; height: 320px; background: white; padding: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        
+        .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 15px; }
+        .chart-box { position: relative; height: 250px; background: white; padding: 12px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        
         .badge { padding: 4px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; display: inline-block; }
         .badge.defected { background: #fadbd8; color: #e74c3c; }
+        
         #dashboard { display: none; }
-        .date-item { display: inline-block; margin-right: 15px; }
-        .date-item label { font-size: 11px; font-weight: 600; color: #999; display: block; margin-bottom: 5px; text-transform: uppercase; }
-        .date-item input { width: 150px; padding: 8px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 13px; }
-        .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px; }
-        .geo-stat { background: #f8f9fa; padding: 15px; border-radius: 4px; border-left: 3px solid #003d82; }
-        .geo-stat h4 { color: #003d82; font-size: 13px; margin-bottom: 8px; font-weight: 600; }
-        .geo-stat .big { font-size: 24px; font-weight: bold; color: #003d82; }
+        
+        .date-item { display: inline-block; margin-right: 10px; margin-bottom: 10px; }
+        .date-item label { font-size: 10px; font-weight: 600; color: #999; display: block; margin-bottom: 4px; text-transform: uppercase; }
+        .date-item input { width: 130px; padding: 6px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 12px; }
+        
+        .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+        .geo-stat { background: #f8f9fa; padding: 12px; border-radius: 4px; border-left: 3px solid #003d82; }
+        .geo-stat h4 { color: #003d82; font-size: 12px; margin-bottom: 6px; font-weight: 600; }
+        .geo-stat .big { font-size: 20px; font-weight: bold; color: #003d82; }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .header { padding: 10px; margin-bottom: 15px; gap: 8px; }
+            .logo { height: 40px; }
+            .header-title h1 { font-size: 18px; }
+            .header-title p { font-size: 10px; }
+            .btn { padding: 6px 10px; font-size: 11px; }
+            
+            .cards { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+            .card { padding: 12px; }
+            .card h3 { font-size: 9px; margin-bottom: 6px; }
+            .card .value { font-size: 20px; }
+            
+            .section { padding: 12px; margin-bottom: 12px; }
+            .section h2 { font-size: 11px; margin: -12px -12px 10px -12px; padding: 8px 12px; }
+            
+            .filters { padding: 12px; }
+            .filter-section { margin-bottom: 12px; }
+            .filter-section h4 { font-size: 10px; margin-bottom: 6px; }
+            .tag { padding: 4px 8px; font-size: 11px; }
+            
+            .date-item { margin-right: 8px; }
+            .date-item label { font-size: 9px; margin-bottom: 3px; }
+            .date-item input { width: 110px; padding: 5px; font-size: 11px; }
+            
+            .chart-box { height: 200px; padding: 10px; }
+            .charts { gap: 10px; margin-bottom: 10px; }
+            
+            .geo-grid { grid-template-columns: 1fr; gap: 10px; }
+            .geo-stat { padding: 10px; }
+            .geo-stat h4 { font-size: 11px; }
+            .geo-stat .big { font-size: 18px; }
+        }
+        
+        @media (max-width: 480px) {
+            body { padding: 8px; }
+            .header { padding: 8px; margin-bottom: 10px; gap: 6px; }
+            .logo { height: 35px; }
+            .header-title h1 { font-size: 16px; }
+            .header-title p { font-size: 9px; }
+            .btn { padding: 5px 8px; font-size: 10px; }
+            
+            .cards { grid-template-columns: repeat(2, 1fr); gap: 6px; margin-bottom: 15px; }
+            .card { padding: 10px; }
+            .card h3 { font-size: 8px; margin-bottom: 5px; }
+            .card .value { font-size: 18px; }
+            .card .pct { font-size: 10px; }
+            
+            .section { padding: 10px; margin-bottom: 10px; }
+            .section h2 { font-size: 10px; margin: -10px -10px 8px -10px; padding: 7px 10px; }
+            
+            .filters { padding: 10px; }
+            .filter-section { margin-bottom: 10px; }
+            .filter-section h4 { font-size: 9px; margin-bottom: 5px; }
+            .tag { padding: 3px 6px; font-size: 10px; }
+            .tag-container { gap: 5px; }
+            
+            .date-item { display: block; margin-bottom: 8px; }
+            .date-item input { width: 100%; }
+            
+            .chart-box { height: 180px; padding: 8px; }
+            .charts { grid-template-columns: 1fr; gap: 8px; }
+            
+            .badge { padding: 3px 6px; font-size: 10px; }
+        }
     </style>
 </head>
 <body>
