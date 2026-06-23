@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piling Work Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; padding: 20px; }
+        .container { max-width: 1600px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; gap: 20px; padding: 20px; background: white; border-top: 4px solid #003d82; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .logo { height: 70px; }
+        .header-title { flex: 1; }
+        .header-title h1 { color: #003d82; font-size: 28px; margin: 0; font-weight: 600; }
+        .header-title p { color: #666; font-size: 12px; margin-top: 5px; }
+        .header-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .btn { padding: 10px 20px; background: #003d82; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; }
+        .btn:hover { background: #002850; }
+        .btn-update { background: #27ae60; }
+        .btn-update:hover { background: #229954; }
+        .loading { text-align: center; padding: 40px; color: #999; font-size: 14px; }
+        .error { color: #e74c3c; padding: 20px; background: #fadbd8; border-radius: 4px; margin-bottom: 20px; display: none; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .card { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .card h3 { font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+        .card .value { font-size: 32px; font-weight: bold; color: #003d82; }
+        .card .pct { font-size: 12px; color: #999; margin-top: 5px; }
+        .section { background: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .section h2 { color: white; background: #003d82; font-size: 13px; margin: -20px -20px 15px -20px; padding: 12px 20px; text-transform: uppercase; font-weight: 600; }
+        .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        .chart-box { position: relative; height: 320px; background: white; padding: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-top: 3px solid #003d82; }
+        .badge { padding: 4px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; display: inline-block; }
+        .badge.completed { background: #d5f4e6; color: #27ae60; }
+        .badge.pending { background: #fef5e7; color: #f39c12; }
+        .badge.defected { background: #fadbd8; color: #e74c3c; }
+        #dashboard { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Logorepco.jpg" alt="Repco" class="logo">
+            <div class="header-title">
+                <h1>Piling Work Progress Dashboard</h1>
+                <p>Suwannaphum Rice Co., Ltd. - RISE Project</p>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-update" onclick="updateData()">📊 Update Data</button>
+                <button class="btn" onclick="loadJsonAndRefresh()">🔄 Refresh</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">⏳ Loading data from JSON...</div>
+        <div id="errorMsg" class="error"></div>
+        <div id="dashboard">
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Piles</h3>
+                    <div class="value" id="total">-</div>
+                </div>
+                <div class="card">
+                    <h3>✅ Completed</h3>
+                    <div class="value" id="completed">-</div>
+                    <div class="pct" id="completedPct">0%</div>
+                </div>
+                <div class="card">
+                    <h3>⏳ Pending</h3>
+                    <div class="value" id="pending">-</div>
+                    <div class="pct" id="pendingPct">0%</div>
+                </div>
+                <div class="card">
+                    <h3>⚠️ Defected</h3>
+                    <div class="value" id="defected">-</div>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="chart-box"><canvas id="barChart"></canvas></div>
+                <div class="chart-box"><canvas id="pieChart"></canvas></div>
+            </div>
+
+            <div class="charts">
+                <div class="chart-box"><canvas id="lineChart"></canvas></div>
+                <div class="chart-box"><canvas id="dailyChart"></canvas></div>
+            </div>
+
+            <div class="section">
+                <h2>Issues - Defected Piles</h2>
+                <div id="issueTable"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let PILE_DATA = [];
+        let charts = {};
+
+        async function loadJsonAndRefresh() {
+            try {
+                const timestamp = new Date().getTime();
+                const response = await fetch(`Data/pile_data.json?t=${timestamp}`);
+                
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                PILE_DATA = await response.json();
+                console.log(`✅ Loaded ${PILE_DATA.length} records`);
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('errorMsg').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                
+                updateCharts();
+            } catch (error) {
+                console.error("Error:", error);
+                const errorDiv = document.getElementById('errorMsg');
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = `❌ Error loading JSON: ${error.message}<br><small>File: D:\\Daily Report\\Data\\pile_data.json</small>`;
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        function updateData() {
+            alert('📊 Run this command in Command Prompt:\npython update_pile_dashboard.py\n\nThen click Refresh button');
+        }
+
+        function updateStats() {
+            const total = PILE_DATA.length;
+            const completed = PILE_DATA.filter(p => p.status === 'Completed').length;
+            const pending = PILE_DATA.filter(p => p.status === 'Pending').length;
+            const defected = PILE_DATA.filter(p => p.status === 'Defected').length;
+
+            document.getElementById('total').textContent = total;
+            document.getElementById('completed').textContent = completed;
+            document.getElementById('completedPct').textContent = total > 0 ? Math.round(completed*100/total) + '%' : '0%';
+            document.getElementById('pending').textContent = pending;
+            document.getElementById('pendingPct').textContent = total > 0 ? Math.round(pending*100/total) + '%' : '0%';
+            document.getElementById('defected').textContent = defected;
+        }
+
+        function updateCharts() {
+            updateStats();
+
+            const zones = {};
+            PILE_DATA.forEach(p => {
+                if (!zones[p.area]) zones[p.area] = {total: 0, completed: 0};
+                zones[p.area].total++;
+                if (p.status === 'Completed') zones[p.area].completed++;
+            });
+
+            const zLabels = Object.keys(zones).sort();
+            const zCompleted = zLabels.map(z => zones[z].completed);
+            const zTotal = zLabels.map(z => zones[z].total);
+
+            if (charts.bar) charts.bar.destroy();
+            charts.bar = new Chart(document.getElementById('barChart'), {
+                type: 'bar',
+                data: {
+                    labels: zLabels,
+                    datasets: [
+                        {label: 'Completed', data: zCompleted, backgroundColor: '#27ae60'},
+                        {label: 'Total Plan', data: zTotal, backgroundColor: '#003d82'}
+                    ]
+                },
+                options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
+            });
+
+            const completed = PILE_DATA.filter(p => p.status === 'Completed').length;
+            const pending = PILE_DATA.filter(p => p.status === 'Pending').length;
+            const defected = PILE_DATA.filter(p => p.status === 'Defected').length;
+
+            if (charts.pie) charts.pie.destroy();
+            charts.pie = new Chart(document.getElementById('pieChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Completed', 'Pending', 'Defected'],
+                    datasets: [{
+                        data: [completed, pending, defected],
+                        backgroundColor: ['#27ae60', '#f39c12', '#e74c3c']
+                    }]
+                },
+                options: {responsive: true, maintainAspectRatio: false}
+            });
+
+            const byDate = {};
+            PILE_DATA.filter(p => p.piled_date).forEach(p => {
+                byDate[p.piled_date] = (byDate[p.piled_date] || 0) + 1;
+            });
+
+            const dates = Object.keys(byDate).sort();
+            let cum = 0;
+            const cumData = dates.map(d => {cum += byDate[d]; return cum;});
+
+            if (charts.line) charts.line.destroy();
+            charts.line = new Chart(document.getElementById('lineChart'), {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Cumulative Completed',
+                        data: cumData,
+                        borderColor: '#003d82',
+                        backgroundColor: 'rgba(0, 61, 130, 0.05)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
+            });
+
+            if (charts.daily) charts.daily.destroy();
+            const dailyData = dates.map(d => byDate[d]);
+            charts.daily = new Chart(document.getElementById('dailyChart'), {
+                type: 'bar',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Piles Completed per Day',
+                        data: dailyData,
+                        backgroundColor: '#9b59b6'
+                    }]
+                },
+                options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
+            });
+
+            const issues = PILE_DATA.filter(p => p.status === 'Defected').slice(0, 50);
+            const tData = issues.map(p => [
+                p.pile_number,
+                p.area,
+                p.rig,
+                p.type,
+                p.actual_length || '-',
+                p.piled_date,
+                p.status,
+                p.remark
+            ]);
+
+            document.getElementById('issueTable').innerHTML = '';
+            new gridjs.Grid({
+                columns: [
+                    'Pile #',
+                    'Zone',
+                    'Rig',
+                    'Type',
+                    'Length(m)',
+                    'Date',
+                    {
+                        name: 'Status',
+                        formatter: (cell) => gridjs.html(`<span class="badge defected">⚠️ Defected</span>`)
+                    },
+                    'Problem'
+                ],
+                data: tData,
+                pagination: {limit: 10},
+                sort: true,
+                search: true
+            }).render(document.getElementById('issueTable'));
+        }
+
+        loadJsonAndRefresh();
+    </script>
+</body>
+</html>
