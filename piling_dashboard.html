@@ -552,7 +552,7 @@
                 options: {responsive: true, maintainAspectRatio: false, scales: {y: {beginAtZero: true}}}
             });
 
-            const geoData = filtered.filter(p => p.piled_date && p.n && p.e).map(p => ({
+            const geoData = filtered.filter(p => p.n && p.e).map(p => ({
                 area: p.area,
                 n: parseFloat(p.n),
                 e: parseFloat(p.e),
@@ -560,16 +560,29 @@
             }));
 
             const areaColors = {'WHA': '#e74c3c', 'WHB': '#003d82', 'ROD': '#27ae60'};
+            const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)'};
 
             if (charts.geo) charts.geo.destroy();
             const datasets = [];
-            Object.keys(zones).forEach(area => {
-                const areaGeo = geoData.filter(p => p.area === area);
+            
+            // Group by area and status
+            const grouped = {};
+            geoData.forEach(p => {
+                const key = p.area + '_' + p.status;
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(p);
+            });
+            
+            Object.keys(grouped).sort().forEach(key => {
+                const [area, status] = key.split('_');
+                const areaData = grouped[key];
                 datasets.push({
-                    label: area,
-                    data: areaGeo.map(p => ({x: p.e, y: p.n})),
-                    backgroundColor: areaColors[area] || '#95a5a6',
-                    radius: 4
+                    label: area + ' (' + status + ')',
+                    data: areaData.map(p => ({x: p.e, y: p.n})),
+                    backgroundColor: statusColors[status] || '#95a5a6',
+                    radius: status === 'Defected' ? 5 : 4,
+                    borderColor: areaColors[area] || '#95a5a6',
+                    borderWidth: 1
                 });
             });
 
