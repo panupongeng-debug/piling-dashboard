@@ -93,6 +93,16 @@
         .geo-stat h4 { color: #003d82; font-size: 12px; margin-bottom: 6px; font-weight: 600; }
         .geo-stat .big { font-size: 20px; font-weight: bold; color: #003d82; }
         
+        .rework-item {
+            background: #fff8f0;
+            border-left: 4px solid #e67e22;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #e67e22;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             body { padding: 10px; }
@@ -475,6 +485,22 @@
 
         function updateCharts() {
             updateStats();
+            
+            // Update Rework Piles List
+            const reworkPiles = filtered.filter(p => p.status === 'Rework');
+            const reworkListDiv = document.getElementById('reworkList');
+            reworkListDiv.innerHTML = '';
+            
+            if (reworkPiles.length > 0) {
+                reworkPiles.forEach(p => {
+                    const item = document.createElement('div');
+                    item.className = 'rework-item';
+                    item.textContent = p.pile_number;
+                    reworkListDiv.appendChild(item);
+                });
+            } else {
+                reworkListDiv.innerHTML = '<p style="color: #999; grid-column: 1/-1;">No rework piles</p>';
+            }
 
             const zones = {};
             filtered.forEach(p => {
