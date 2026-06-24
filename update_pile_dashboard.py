@@ -44,7 +44,13 @@ def update_data():
         df = df[df['pile_number'] > 0].reset_index(drop=True)
 
         def get_status(row):
-            if pd.notna(row['remark']) and str(row['remark']).strip() not in ['nan', '']:
+            remark = str(row['remark']).lower() if pd.notna(row['remark']) else ''
+
+            # Check for Rework keywords
+            if 'ตอกแซม' in remark or 'ซ่อม' in remark or 'ตอกใหม่' in remark:
+                return 'Rework'
+            # Check for Defected
+            elif pd.notna(row['remark']) and str(row['remark']).strip() not in ['nan', '']:
                 return 'Defected'
             elif pd.notna(row['weld_inspection']) and row['weld_inspection'] == 'Accept':
                 return 'Completed'
