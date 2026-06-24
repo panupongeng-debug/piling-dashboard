@@ -487,21 +487,6 @@
             updateStats();
             
             // Update Rework Piles List
-            const reworkPiles = filtered.filter(p => p.status === 'Rework');
-            const reworkListDiv = document.getElementById('reworkList');
-            reworkListDiv.innerHTML = '';
-            
-            if (reworkPiles.length > 0) {
-                reworkPiles.forEach(p => {
-                    const item = document.createElement('div');
-                    item.className = 'rework-item';
-                    item.textContent = p.pile_number;
-                    reworkListDiv.appendChild(item);
-                });
-            } else {
-                reworkListDiv.innerHTML = '<p style="color: #999; grid-column: 1/-1;">No rework piles</p>';
-            }
-
             const zones = {};
             filtered.forEach(p => {
                 if (!zones[p.area]) zones[p.area] = {total: 0, completed: 0};
