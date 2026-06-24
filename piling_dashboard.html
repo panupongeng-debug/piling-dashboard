@@ -620,16 +620,16 @@
             }
 
             const issues = filtered.filter(p => p.status === 'Defected' || p.status === 'Rework').slice(0, 50);
-            const tData = issues.map(p => [
-                p.pile_number,
-                p.area,
-                p.rig,
-                p.type,
-                p.actual_length || '-',
-                p.piled_date,
-                p.status,
-                p.remark
-            ]);
+            const tData = issues.map(p => ({
+                pile: p.pile_number,
+                area: p.area,
+                rig: p.rig,
+                type: p.type,
+                length: p.actual_length || '-',
+                date: p.piled_date,
+                status: p.status,
+                problem: p.remark
+            }));
 
             document.getElementById('issueTable').innerHTML = '';
             new gridjs.Grid({
@@ -640,21 +640,19 @@
                     'Type',
                     'Length(m)',
                     'Date',
-                    {
-                        name: 'Status',
-                        formatter: (cell, row) => {
-                            const status = row.cells[6];
-                            if (status === 'Defected') {
-                                return gridjs.html(`<span class="badge defected">⚠️ Defected</span>`);
-                            } else if (status === 'Rework') {
-                                return gridjs.html(`<span class="badge rework">🔧 Rework</span>`);
-                            }
-                            return status;
-                        }
-                    },
+                    'Status',
                     'Problem'
                 ],
-                data: tData,
+                data: tData.map(p => [
+                    p.pile,
+                    p.area,
+                    p.rig,
+                    p.type,
+                    p.length,
+                    p.date,
+                    p.status === 'Defected' ? '⚠️ Defected' : (p.status === 'Rework' ? '🔧 Rework' : p.status),
+                    p.problem
+                ]),
                 pagination: {limit: 10},
                 sort: true,
                 search: true
