@@ -593,14 +593,18 @@
             Object.keys(grouped).sort().forEach(key => {
                 const [area, status] = key.split('_');
                 const areaData = grouped[key];
-                datasets.push({
+                const config = {
                     label: area + ' (' + status + ')',
                     data: areaData.map(p => ({x: p.e, y: p.n})),
                     backgroundColor: statusColors[status] || '#95a5a6',
-                    radius: status === 'Defected' ? 5 : 4,
-                    borderColor: areaColors[area] || '#95a5a6',
-                    borderWidth: 1
-                });
+                    radius: status === 'Defected' ? 5 : 4
+                };
+                // Add border only for Defected and Completed
+                if (status !== 'Pending') {
+                    config.borderColor = areaColors[area] || '#95a5a6';
+                    config.borderWidth = 1;
+                }
+                datasets.push(config);
             });
 
             charts.geo = new Chart(document.getElementById('geoChart'), {
