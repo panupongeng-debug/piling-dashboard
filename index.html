@@ -7,136 +7,176 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #003d82 0%, #005fa3 100%);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            color: #333;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             width: 100%;
         }
 
         .header {
             text-align: center;
             margin-bottom: 60px;
-            color: white;
         }
 
         .header img {
-            height: 80px;
-            margin-bottom: 20px;
+            height: 90px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
         }
 
         .header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 48px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #003d82;
+            letter-spacing: -0.5px;
         }
 
         .header p {
             font-size: 16px;
-            opacity: 0.9;
+            color: #666;
+            font-weight: 400;
         }
 
         .dashboards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
             margin-bottom: 40px;
         }
 
         .dashboard-card {
             background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-decoration: none;
             color: inherit;
-            transition: all 0.3s ease;
-            border-top: 4px solid #003d82;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #003d82;
+            transition: height 0.35s ease;
         }
 
         .dashboard-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
         }
 
-        .dashboard-card.piling {
-            border-top-color: #27ae60;
+        .dashboard-card.piling::before {
+            background: #27ae60;
         }
 
-        .dashboard-card.qc {
-            border-top-color: #e67e22;
+        .dashboard-card.qc::before {
+            background: #e67e22;
         }
 
         .dashboard-card .icon {
-            font-size: 50px;
-            margin-bottom: 15px;
+            font-size: 56px;
+            margin-bottom: 20px;
+            display: block;
         }
 
         .dashboard-card h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 26px;
+            margin-bottom: 12px;
             color: #003d82;
+            font-weight: 600;
         }
 
         .dashboard-card p {
             font-size: 14px;
             color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-weight: 400;
         }
 
         .dashboard-card .btn {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 32px;
             background: #003d82;
             color: white;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 14px;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            border: 2px solid #003d82;
+            cursor: pointer;
         }
 
         .dashboard-card:hover .btn {
-            background: #002850;
+            background: white;
+            color: #003d82;
         }
 
         .dashboard-card.piling:hover .btn {
-            background: #229954;
+            background: #27ae60;
+            border-color: #27ae60;
+            color: white;
         }
 
         .dashboard-card.qc:hover .btn {
-            background: #d35400;
+            background: #e67e22;
+            border-color: #e67e22;
+            color: white;
         }
 
         .info {
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            padding: 20px;
-            color: white;
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
             text-align: center;
             font-size: 13px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #003d82;
         }
 
-        .info a {
-            color: #fff;
-            text-decoration: underline;
+        .info p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info strong {
+            color: #003d82;
+            font-weight: 600;
         }
 
         /* Mobile responsive */
         @media (max-width: 768px) {
-            .header h1 { font-size: 28px; }
-            .header p { font-size: 14px; }
+            .header h1 { font-size: 32px; }
+            .header p { font-size: 15px; }
+            .header img { height: 70px; margin-bottom: 20px; }
             .dashboards { gap: 20px; }
-            .dashboard-card { padding: 20px; }
-            .dashboard-card h2 { font-size: 20px; }
+            .dashboard-card { padding: 28px; }
+            .dashboard-card h2 { font-size: 22px; }
+            .dashboard-card .icon { font-size: 48px; }
         }
     </style>
 </head>
