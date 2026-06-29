@@ -28,6 +28,7 @@ def update_data():
             'SIZE': 'size',
             'LENGTH(m.)': 'length',
             'LENGTH(m.)\n(Actual)': 'actual_length',
+            'แผนวันที่ตอก': 'planned_date',
             'วันที่ตอก': 'piled_date',
             'Weld \nInspection': 'weld_inspection',
             'REMARK': 'remark'
@@ -35,6 +36,7 @@ def update_data():
 
         df.rename(columns=col_mapping, inplace=True)
         df['piled_date'] = pd.to_datetime(df['piled_date'], errors='coerce')
+        df['planned_date'] = pd.to_datetime(df['planned_date'], errors='coerce')
         df['pile_number'] = pd.to_numeric(df['pile_number'], errors='coerce').fillna(0).astype(int)
         df['rig'] = pd.to_numeric(df['rig'], errors='coerce').fillna(0).astype(int)
         df['n'] = pd.to_numeric(df['n'], errors='coerce')
@@ -61,7 +63,8 @@ def update_data():
 
         df['status'] = df.apply(get_status, axis=1)
 
-        df_export = df[['pile_number', 'n', 'e', 'area', 'rig', 'rig_code', 'type', 'size', 'length', 'actual_length', 'piled_date', 'status', 'remark']].copy()
+        df_export = df[['pile_number', 'n', 'e', 'area', 'rig', 'rig_code', 'type', 'size', 'length', 'actual_length', 'planned_date', 'piled_date', 'status', 'remark']].copy()
+        df_export['planned_date'] = df_export['planned_date'].dt.strftime('%Y-%m-%d').where(pd.notna(df_export['planned_date']), '')
         df_export['piled_date'] = df_export['piled_date'].dt.strftime('%Y-%m-%d').where(pd.notna(df_export['piled_date']), '')
         df_export['remark'] = df_export['remark'].fillna('')
         df_export['rig'] = df_export['rig'].astype(int)
