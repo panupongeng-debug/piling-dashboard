@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Index - RISE Project</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #003d82 0%, #005fa3 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .dashboards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border-top: 4px solid #003d82;
+            cursor: pointer;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .dashboard-card.piling {
+            border-top-color: #27ae60;
+        }
+
+        .dashboard-card.qc {
+            border-top-color: #e67e22;
+        }
+
+        .dashboard-card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .dashboard-card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003d82;
+        }
+
+        .dashboard-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #003d82;
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .dashboard-card:hover .btn {
+            background: #002850;
+        }
+
+        .dashboard-card.piling:hover .btn {
+            background: #229954;
+        }
+
+        .dashboard-card.qc:hover .btn {
+            background: #d35400;
+        }
+
+        .info {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .info a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 28px; }
+            .header p { font-size: 14px; }
+            .dashboards { gap: 20px; }
+            .dashboard-card { padding: 20px; }
+            .dashboard-card h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Logorepco.jpg" alt="Repco">
+            <h1>RISE Project Dashboards</h1>
+            <p>Suwannaphum Rice Co., Ltd.</p>
+        </div>
+
+        <div class="dashboards">
+            <a href="piling_dashboard.html" class="dashboard-card piling">
+                <div class="icon">📊</div>
+                <h2>Piling Dashboard</h2>
+                <p>Track pile foundation installation progress, defects, and rework status in real-time.</p>
+                <span class="btn">เข้าดู →</span>
+            </a>
+
+            <a href="qc_dashboard.html" class="dashboard-card qc" style="opacity: 0.6; cursor: not-allowed;">
+                <div class="icon">✅</div>
+                <h2>QC Dashboard</h2>
+                <p>Monitor quality control issues and RFI log tracking.</p>
+                <span class="btn">เข้าดู →</span>
+            </a>
+        </div>
+
+        <div class="info">
+            <p>📌 <strong>Piling Dashboard:</strong> Real-time monitoring of pile installation status, geographic distribution, and quality issues.</p>
+            <p style="margin-top: 10px;">📌 <strong>QC Dashboard:</strong> Coming soon - Quality control and RFI log management.</p>
+        </div>
+    </div>
+</body>
+</html>
