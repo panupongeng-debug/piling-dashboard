@@ -143,6 +143,16 @@
             color: white;
         }
 
+        .dashboard-card.daily::before {
+            background: #16a085;
+        }
+
+        .dashboard-card.daily:hover .btn {
+            background: #16a085;
+            border-color: #16a085;
+            color: white;
+        }
+
         .info {
             background: white;
             border-radius: 12px;
@@ -196,17 +206,25 @@
                 <span class="btn">เข้าดู →</span>
             </a>
 
-            <a href="qc_dashboard.html" class="dashboard-card qc" style="opacity: 0.6; cursor: not-allowed;">
+            <a href="qc_dashboard.html" class="dashboard-card qc">
                 <div class="icon">✅</div>
                 <h2>QC Dashboard</h2>
-                <p>Monitor quality control issues and RFI log tracking.</p>
+                <p>Monitor quality control issues and RFI/FIR log tracking.</p>
+                <span class="btn">เข้าดู →</span>
+            </a>
+
+            <a href="daily_progress_dashboard.html" class="dashboard-card daily">
+                <div class="icon">📈</div>
+                <h2>Daily Progress</h2>
+                <p>Track daily construction progress, personnel, equipment, and weather conditions.</p>
                 <span class="btn">เข้าดู →</span>
             </a>
         </div>
 
         <div class="info">
             <p>📌 <strong>Piling Dashboard:</strong> Real-time monitoring of pile installation status, geographic distribution, and quality issues.</p>
-            <p style="margin-top: 10px;">📌 <strong>QC Dashboard:</strong> Coming soon - Quality control and RFI log management.</p>
+            <p style="margin-top: 10px;">📌 <strong>QC Dashboard:</strong> Quality control and RFI/FIR log management.</p>
+            <p style="margin-top: 10px;">📌 <strong>Daily Progress:</strong> Daily construction progress tracking with personnel, equipment, weather, and photographic records.</p>
         </div>
     </div>
 </body>
