@@ -52,7 +52,7 @@ if __name__ == '__main__':
         time.sleep(2)
 
         try:
-            webbrowser.open(f'http://localhost:{PORT}/piling_dashboard.html')
+            webbrowser.open(f'http://localhost:{PORT}')
         except:
             print("⚠️ Could not open browser automatically")
             print(f"📌 Please open: http://localhost:{PORT}/piling_dashboard.html manually")
