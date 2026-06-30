@@ -6,7 +6,7 @@ import json
 import os
 
 EXCEL_FILE = r'D:\Daily Report\Data\Pile Log.xlsx'
-JSON_FILE = r'D:\Daily Report\piling-dashboard\Data\pile_data.json'
+JSON_FILE = r'D:\Daily Report\Rise-dashboard\Data\pile_data.json'
 
 def update_data():
     try:
