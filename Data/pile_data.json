@@ -18828,7 +18828,7 @@
     "actual_length": 26.0,
     "planned_date": "2026-06-10",
     "piled_date": "2026-06-11",
-    "status": "Defected",
+    "status": "Completed",
     "remark": "Pilot pile03"
   },
   {
@@ -20204,7 +20204,7 @@
     "actual_length": 26.0,
     "planned_date": "",
     "piled_date": "2026-06-13",
-    "status": "Defected",
+    "status": "Completed",
     "remark": "Pilot pile04"
   },
   {
@@ -24428,7 +24428,7 @@
     "actual_length": 26.0,
     "planned_date": "2026-06-10",
     "piled_date": "2026-06-10",
-    "status": "Defected",
+    "status": "Completed",
     "remark": "Pilot pile02"
   },
   {
@@ -33084,7 +33084,7 @@
     "actual_length": 26.0,
     "planned_date": "2026-06-10",
     "piled_date": "2026-06-10",
-    "status": "Defected",
+    "status": "Completed",
     "remark": "Pilot pile01"
   },
   {

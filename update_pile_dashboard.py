@@ -46,6 +46,10 @@ def update_data():
         df = df[df['pile_number'] > 0].reset_index(drop=True)
 
         def get_status(row):
+            # Pilot piles (01-04) are always Completed
+            if row['pile_number'] in [2068, 1527, 1177, 1263]:
+                return 'Completed'
+
             remark = str(row['remark']).lower() if pd.notna(row['remark']) else ''
 
             # Check for Corrected keywords (piles that were corrected/reworked)
