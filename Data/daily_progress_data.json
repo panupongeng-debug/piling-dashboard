@@ -1,13 +1,329 @@
 {
   "summary": {
-    "total_reports": 51,
-    "date_range_start": "01/06/26",
-    "date_range_end": "30/06/26",
-    "total_photos": 113,
-    "avg_workers": 27.3,
+    "total_reports": 52,
+    "date_range_start": "21/05/26",
+    "date_range_end": "01/07/26",
+    "total_photos": 117,
+    "avg_workers": 27.8,
     "avg_equipment_types": 4.4
   },
   "daily_reports": [
+    {
+      "date": "21/05/26",
+      "shift": "Afternoon",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "22/05/26",
+      "shift": "Afternoon",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "22/05/26",
+      "shift": "Morning",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "23/05/26",
+      "shift": "Afternoon",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "23/05/26",
+      "shift": "Morning",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "25/05/26",
+      "shift": "Afternoon",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "25/05/26",
+      "shift": "Morning",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "26/05/26",
+      "shift": "Afternoon",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "26/05/26",
+      "shift": "Morning",
+      "weather": "",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [],
+      "activity_goals": [],
+      "progress": [],
+      "photos": 0,
+      "hours": 0
+    },
+    {
+      "date": "27/05/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [],
+      "progress": [
+        "นำเครื่องจักรเคลียร์วัชพืชในพื้นที่เรียบร้อย",
+        "เชื่อมต่อไฟฟ้าชั่วคราวกับทางโรงงานเข้าตู้ออฟฟิตชั่วคราวเรียบร้อย",
+        "ล้อมรั้วพื้นที่แคมป์คนงาน 80%"
+      ],
+      "photos": 6,
+      "hours": 11
+    },
+    {
+      "date": "28/05/26",
+      "shift": "Afternoon",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 1,
+      "state_workers_m": 13,
+      "state_workers_w": 13,
+      "state_workers_total": 26,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน(ต่อ)",
+        "ขนย้ายห้องพักคนงาน20ห้องและห้องน้ำอีก1หลังเข้าแคมป์คนงาน",
+        "ก่ออ่างอาบน้ำแคมป์คนงาน"
+      ],
+      "progress": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน 95% คงเหลือประตูทางเข้า",
+        "ขนย้ายห้องพักคนงาน20ห้อง เริ่มประกอบได้30%",
+        "ก่ออ่างอาบน้ำแคมป์คนงาน เรียบร้อย คงเหลืองานฉาบ"
+      ],
+      "photos": 4,
+      "hours": 11
+    },
+    {
+      "date": "28/05/26",
+      "shift": "Morning",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 0,
+      "state_workers_m": 0,
+      "state_workers_w": 0,
+      "state_workers_total": 0,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน(ต่อ)",
+        "ขนย้ายห้องพักคนงาน20ห้องและห้องน้ำอีก1หลังเข้าแคมป์คนงาน",
+        "ก่ออ่างอาบน้ำแคมป์คนงาน"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 0,
+      "hours": 11
+    },
+    {
+      "date": "29/05/26",
+      "shift": "Afternoon",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 1,
+      "state_workers_m": 15,
+      "state_workers_w": 11,
+      "state_workers_total": 26,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก(ต่อ)",
+        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
+        "ฉาบอ่างอาบน้ำแคมป์คนงาน",
+        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง"
+      ],
+      "progress": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก เรียบร้อย",
+        "ประกอบห้องพักคนงาน20ห้อง 60%",
+        "ฉาบอ่างอาบน้ำแคมป์คนงาน 50%",
+        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง เรียบร้อย"
+      ],
+      "photos": 4,
+      "hours": 11
+    },
+    {
+      "date": "29/05/26",
+      "shift": "Morning",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 1,
+      "state_workers_m": 13,
+      "state_workers_w": 13,
+      "state_workers_total": 26,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก(ต่อ)",
+        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
+        "ฉาบอ่างอาบน้ำแคมป์คนงาน",
+        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 0,
+      "hours": 11
+    },
+    {
+      "date": "30/05/26",
+      "shift": "Afternoon",
+      "weather": "Rainy (ฝนตก)",
+      "repco_personnel": 1,
+      "state_workers_m": 15,
+      "state_workers_w": 10,
+      "state_workers_total": 25,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
+        "ฉาบอ่างอาบน้ำแคมป์คนงาน(ต่อ)",
+        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง"
+      ],
+      "progress": [
+        "ประกอบห้องพักคนงาน20ห้อง 80%",
+        "ฉาบอ่างอาบน้ำแคมป์คนงานเรียบร้อย",
+        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง ยังไม่ได้เริ่มมีฝนตกช่วงบ่าย",
+        "ขนย้ายห้องพักคนงานเข้าเพิ่ม20ห้อง"
+      ],
+      "photos": 3,
+      "hours": 11
+    },
+    {
+      "date": "30/05/26",
+      "shift": "Morning",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 1,
+      "state_workers_m": 15,
+      "state_workers_w": 11,
+      "state_workers_total": 26,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  1คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถบรรทุกสิบล้อ 1คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
+        "ฉาบอ่างอาบน้ำแคมป์คนงาน(ต่อ)",
+        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 0,
+      "hours": 11
+    },
     {
       "date": "01/06/26",
       "shift": "Afternoon",
@@ -706,20 +1022,6 @@
       "hours": 11
     },
     {
-      "date": "21/05/26",
-      "shift": "Afternoon",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
       "date": "21/06/26",
       "shift": "Daily Report",
       "weather": "Sunny (ท้องฟ้าโปร่งใส)",
@@ -749,34 +1051,6 @@
       ],
       "photos": 4,
       "hours": 11
-    },
-    {
-      "date": "22/05/26",
-      "shift": "Afternoon",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
-      "date": "22/05/26",
-      "shift": "Morning",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
     },
     {
       "date": "22/06/26",
@@ -814,34 +1088,6 @@
       ],
       "photos": 0,
       "hours": 11
-    },
-    {
-      "date": "23/05/26",
-      "shift": "Afternoon",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
-      "date": "23/05/26",
-      "shift": "Morning",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
     },
     {
       "date": "23/06/26",
@@ -917,34 +1163,6 @@
       "hours": 11
     },
     {
-      "date": "25/05/26",
-      "shift": "Afternoon",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
-      "date": "25/05/26",
-      "shift": "Morning",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
       "date": "25/06/26",
       "shift": "Daily Report",
       "weather": "Sunny (ท้องฟ้าโปร่งใส)",
@@ -980,34 +1198,6 @@
       "hours": 11
     },
     {
-      "date": "26/05/26",
-      "shift": "Afternoon",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
-      "date": "26/05/26",
-      "shift": "Morning",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
       "date": "26/06/26",
       "shift": "Daily Report",
       "weather": "Sunny (ท้องฟ้าโปร่งใส)",
@@ -1039,30 +1229,6 @@
       "hours": 11
     },
     {
-      "date": "27/05/26",
-      "shift": "Daily Report",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [],
-      "progress": [
-        "นำเครื่องจักรเคลียร์วัชพืชในพื้นที่เรียบร้อย",
-        "เชื่อมต่อไฟฟ้าชั่วคราวกับทางโรงงานเข้าตู้ออฟฟิตชั่วคราวเรียบร้อย",
-        "ล้อมรั้วพื้นที่แคมป์คนงาน 80%"
-      ],
-      "photos": 6,
-      "hours": 11
-    },
-    {
       "date": "27/06/26",
       "shift": "Daily Report",
       "weather": "Sunny (ท้องฟ้าโปร่งใส)",
@@ -1091,60 +1257,6 @@
         "ปั้นจั่นเบอร์5 ตอกเสาเข็ม I-26x26x25m.dowel พื้นที่ WHA 3ต้น"
       ],
       "photos": 4,
-      "hours": 11
-    },
-    {
-      "date": "28/05/26",
-      "shift": "Afternoon",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 1,
-      "state_workers_m": 13,
-      "state_workers_w": 13,
-      "state_workers_total": 26,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน(ต่อ)",
-        "ขนย้ายห้องพักคนงาน20ห้องและห้องน้ำอีก1หลังเข้าแคมป์คนงาน",
-        "ก่ออ่างอาบน้ำแคมป์คนงาน"
-      ],
-      "progress": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน 95% คงเหลือประตูทางเข้า",
-        "ขนย้ายห้องพักคนงาน20ห้อง เริ่มประกอบได้30%",
-        "ก่ออ่างอาบน้ำแคมป์คนงาน เรียบร้อย คงเหลืองานฉาบ"
-      ],
-      "photos": 4,
-      "hours": 11
-    },
-    {
-      "date": "28/05/26",
-      "shift": "Morning",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน(ต่อ)",
-        "ขนย้ายห้องพักคนงาน20ห้องและห้องน้ำอีก1หลังเข้าแคมป์คนงาน",
-        "ก่ออ่างอาบน้ำแคมป์คนงาน"
-      ],
-      "progress": [
-        ""
-      ],
-      "photos": 0,
       "hours": 11
     },
     {
@@ -1181,63 +1293,6 @@
       "hours": 11
     },
     {
-      "date": "29/05/26",
-      "shift": "Afternoon",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 1,
-      "state_workers_m": 15,
-      "state_workers_w": 11,
-      "state_workers_total": 26,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก(ต่อ)",
-        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
-        "ฉาบอ่างอาบน้ำแคมป์คนงาน",
-        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง"
-      ],
-      "progress": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก เรียบร้อย",
-        "ประกอบห้องพักคนงาน20ห้อง 60%",
-        "ฉาบอ่างอาบน้ำแคมป์คนงาน 50%",
-        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง เรียบร้อย"
-      ],
-      "photos": 4,
-      "hours": 11
-    },
-    {
-      "date": "29/05/26",
-      "shift": "Morning",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 1,
-      "state_workers_m": 13,
-      "state_workers_w": 13,
-      "state_workers_total": 26,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ล้อมรั้วพื้นที่แคมป์คนงาน งานประตูทางเข้าออก(ต่อ)",
-        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
-        "ฉาบอ่างอาบน้ำแคมป์คนงาน",
-        "เทพื้นอ่างอาบน้ำเพิ่มอีก 1 อ่าง"
-      ],
-      "progress": [
-        ""
-      ],
-      "photos": 0,
-      "hours": 11
-    },
-    {
       "date": "29/06/26",
       "shift": "Daily Report",
       "weather": "",
@@ -1250,61 +1305,6 @@
       "progress": [],
       "photos": 0,
       "hours": 0
-    },
-    {
-      "date": "30/05/26",
-      "shift": "Afternoon",
-      "weather": "Rainy (ฝนตก)",
-      "repco_personnel": 1,
-      "state_workers_m": 15,
-      "state_workers_w": 10,
-      "state_workers_total": 25,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
-        "ฉาบอ่างอาบน้ำแคมป์คนงาน(ต่อ)",
-        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง"
-      ],
-      "progress": [
-        "ประกอบห้องพักคนงาน20ห้อง 80%",
-        "ฉาบอ่างอาบน้ำแคมป์คนงานเรียบร้อย",
-        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง ยังไม่ได้เริ่มมีฝนตกช่วงบ่าย",
-        "ขนย้ายห้องพักคนงานเข้าเพิ่ม20ห้อง"
-      ],
-      "photos": 3,
-      "hours": 11
-    },
-    {
-      "date": "30/05/26",
-      "shift": "Morning",
-      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
-      "repco_personnel": 1,
-      "state_workers_m": 15,
-      "state_workers_w": 11,
-      "state_workers_total": 26,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  1คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถบรรทุกสิบล้อ 1คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ประกอบห้องพักคนงาน20ห้อง(ต่อ)",
-        "ฉาบอ่างอาบน้ำแคมป์คนงาน(ต่อ)",
-        "ก่ออ่างอาบน้ำเพิ่มอีก 1 อ่าง"
-      ],
-      "progress": [
-        ""
-      ],
-      "photos": 0,
-      "hours": 11
     },
     {
       "date": "30/06/26",
@@ -1330,6 +1330,36 @@
         "ปั้นจั่นเบอร์3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
         "ปั้นจั่นเบอร์6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
         "การประปามาเชื่อมน้ำประปาชั่วคราว"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 11
+    },
+    {
+      "date": "01/07/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 4,
+      "state_workers_m": 15,
+      "state_workers_w": 13,
+      "state_workers_total": 53,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 6คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์1 ตอกเสาเข็ม I-26x26x23m. พื้นที่แนวรั้ว",
+        "ปั้นจั่นเบอร์2ตอกเสาเข็ม I-26x26x25m.พื้นที่ WHA",
+        "ปั้นจั่นเบอร์4 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHA",
+        "ปั้นจั่นเบอร์5 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHA",
+        "ปั้นจั่นเบอร์6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
+        "งานเตรียมการ(site temporary)"
       ],
       "progress": [
         ""

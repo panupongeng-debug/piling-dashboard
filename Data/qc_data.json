@@ -3,8 +3,8 @@
     {
       "Unit": "",
       "Discipline": "Total",
-      "RFI Issued": 22.0,
-      "RFI Open (AF)": 10.0,
+      "RFI Issued": 26.0,
+      "RFI Open (AF)": 12.0,
       "RFI Cancelled(AF)": 0.0,
       "RFI  Rejected(AF)": 0.0,
       "RFI Completed (AF)": 12.0,
@@ -16,7 +16,7 @@
   ],
   "rfi_open": [
     {
-      "No.": 1,
+      "No.": 1.0,
       "RFI No.": "B266530-RFI-REP-CV-0001",
       "Planned Inspection Date": "2026-06-10",
       "ITP Description": "Material Receiving Inspection ",
@@ -24,7 +24,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 2,
+      "No.": 2.0,
       "RFI No.": "B266530-RFI-REP-CV-0002",
       "Planned Inspection Date": "2026-06-10",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -32,7 +32,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 3,
+      "No.": 3.0,
       "RFI No.": "B266530-RFI-REP-CV-0003",
       "Planned Inspection Date": "2026-06-11",
       "ITP Description": "Material Receiving Inspection ",
@@ -40,7 +40,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 4,
+      "No.": 4.0,
       "RFI No.": "B266530-RFI-REP-CV-0004",
       "Planned Inspection Date": "2026-06-11",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -48,7 +48,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 5,
+      "No.": 5.0,
       "RFI No.": "B266530-RFI-REP-CV-0005",
       "Planned Inspection Date": "2026-06-12",
       "ITP Description": "Material Receiving Inspection ",
@@ -56,7 +56,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 6,
+      "No.": 6.0,
       "RFI No.": "B266530-RFI-REP-CV-0006",
       "Planned Inspection Date": "2026-06-14",
       "ITP Description": "Material Receiving Inspection ",
@@ -64,7 +64,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 7,
+      "No.": 7.0,
       "RFI No.": "B266530-RFI-REP-CV-0007",
       "Planned Inspection Date": "2026-06-14",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -72,7 +72,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 8,
+      "No.": 8.0,
       "RFI No.": "B266530-RFI-REP-CV-0008",
       "Planned Inspection Date": "2026-06-15",
       "ITP Description": "Material Receiving Inspection ",
@@ -80,7 +80,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 9,
+      "No.": 9.0,
       "RFI No.": "B266530-RFI-REP-CV-0009",
       "Planned Inspection Date": "2026-06-15",
       "ITP Description": "Material Receiving Inspection ",
@@ -88,7 +88,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 10,
+      "No.": 10.0,
       "RFI No.": "B266530-RFI-REP-CV-0010",
       "Planned Inspection Date": "2026-06-18",
       "ITP Description": "Material Receiving Inspection ",
@@ -96,7 +96,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 11,
+      "No.": 11.0,
       "RFI No.": "B266530-RFI-REP-CV-0011",
       "Planned Inspection Date": "2026-06-18",
       "ITP Description": "Material Receiving Inspection ",
@@ -104,7 +104,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 12,
+      "No.": 12.0,
       "RFI No.": "B266530-RFI-REP-CV-0012",
       "Planned Inspection Date": "2026-06-17",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -112,7 +112,7 @@
       "Inspection Result": "Approved"
     },
     {
-      "No.": 13,
+      "No.": 13.0,
       "RFI No.": "B266530-RFI-REP-CV-0013",
       "Planned Inspection Date": "2026-06-19",
       "ITP Description": "Material Receiving Inspection ",
@@ -120,7 +120,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 14,
+      "No.": 14.0,
       "RFI No.": "B266530-RFI-REP-CV-0014",
       "Planned Inspection Date": "",
       "ITP Description": "",
@@ -128,7 +128,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 15,
+      "No.": 15.0,
       "RFI No.": "B266530-RFI-REP-CV-0015",
       "Planned Inspection Date": "",
       "ITP Description": "",
@@ -136,7 +136,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 16,
+      "No.": 16.0,
       "RFI No.": "B266530-RFI-REP-CV-0016",
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Material Receiving Inspection ",
@@ -144,7 +144,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 17,
+      "No.": 17.0,
       "RFI No.": "B266530-RFI-REP-CV-0017",
       "Planned Inspection Date": "2026-06-18",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -152,7 +152,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 18,
+      "No.": 18.0,
       "RFI No.": "B266530-RFI-REP-CV-0018",
       "Planned Inspection Date": "2026-06-20",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -160,7 +160,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 19,
+      "No.": 19.0,
       "RFI No.": "B266530-RFI-REP-CV-0019",
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Material Receiving Inspection ",
@@ -168,7 +168,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 20,
+      "No.": 20.0,
       "RFI No.": "B266530-RFI-REP-CV-0020",
       "Planned Inspection Date": "2026-06-19",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -176,7 +176,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 21,
+      "No.": 21.0,
       "RFI No.": "B266530-RFI-REP-CV-0021",
       "Planned Inspection Date": "2026-06-09",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
@@ -184,7 +184,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 22,
+      "No.": 22.0,
       "RFI No.": "B266530-RFI-REP-CV-0022",
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Material Receiving Inspection ",
@@ -192,7 +192,7 @@
       "Inspection Result": ""
     },
     {
-      "No.": 23,
+      "No.": 23.0,
       "RFI No.": "B266530-RFI-REP-CV-0023",
       "Planned Inspection Date": "2026-06-24",
       "ITP Description": "Material Receiving Inspection ",
@@ -200,11 +200,115 @@
       "Inspection Result": ""
     },
     {
-      "No.": 24,
+      "No.": 24.0,
       "RFI No.": "B266530-RFI-REP-CV-0024",
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 34  ต้น",
+      "Inspection Result": ""
+    },
+    {
+      "No.": 25.0,
+      "RFI No.": "B266530-RFI-REP-CV-0025",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": 26.0,
+      "RFI No.": "B266530-RFI-REP-CV-0026",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": 27.0,
+      "RFI No.": "B266530-RFI-REP-CV-0027",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": 28.0,
+      "RFI No.": "B266530-RFI-REP-CV-0028",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0029",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0030",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0031",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0032",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0033",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0034",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0035",
+      "Planned Inspection Date": "2026-06-30",
+      "ITP Description": "Material Receiving Inspection ",
+      "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x22 M จำนวน 8 ต้น ขนาด 0.26x0.26x26 M จำนวน 8 ต้น",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0036",
+      "Planned Inspection Date": "2026-06-30",
+      "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
+      "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
+      "Inspection Result": ""
+    },
+    {
+      "No.": "",
+      "RFI No.": "B266530-RFI-REP-CV-0037",
+      "Planned Inspection Date": "",
+      "ITP Description": "",
+      "Description of Inspection": "",
       "Inspection Result": ""
     }
   ],

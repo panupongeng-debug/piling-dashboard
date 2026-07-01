@@ -147,9 +147,12 @@ def update_daily_progress_data():
                         daily_reports.append(report)
 
         print(f"\n✓ Loaded {len(daily_reports)} daily reports")
+        print(f"📄 Dates before sort: {[r['date'] for r in daily_reports[:5]]}")
 
-        # Sort by date and shift (AM before PM)
-        daily_reports.sort(key=lambda x: (x['date'], x['shift']))
+        # Sort by date and shift - convert DD/MM/YY to comparable format
+        daily_reports.sort(key=lambda x: (x['date'].split('/')[2], x['date'].split('/')[1], x['date'].split('/')[0], x['shift']))
+
+        print(f"📄 Dates after sort: {[r['date'] for r in daily_reports[:5]]}")
 
         # Calculate summary
         total_photos = sum(r['photos'] for r in daily_reports)
