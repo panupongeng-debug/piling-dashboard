@@ -286,6 +286,7 @@
     <script>
         let DAILY_DATA = [];
         let charts = {};
+        let currentGrid = null;  // Store grid instance for destruction
 
         async function loadData() {
             try {
@@ -468,13 +469,26 @@
             });
 
             document.getElementById('reportsTable').innerHTML = '';
-            new gridjs.Grid({
+
+            // Destroy old grid if exists
+            if (currentGrid) {
+                try {
+                    currentGrid.destroy();
+                } catch (e) {
+                    console.log('Grid destroy error:', e);
+                }
+            }
+
+            // Create new grid
+            currentGrid = new gridjs.Grid({
                 columns: ['Date', 'Shift', 'Weather', 'REPCO', 'Workers', 'Equipment', 'Hours', 'Photos', 'Report'],
                 data: tableData,
                 pagination: { limit: 15 },
                 sort: true,
                 search: true
-            }).render(document.getElementById('reportsTable'));
+            });
+
+            currentGrid.render(document.getElementById('reportsTable'));
         }
 
         function dateToComparable(dateStr) {
