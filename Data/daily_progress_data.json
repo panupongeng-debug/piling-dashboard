@@ -1,17 +1,17 @@
 {
   "summary": {
-    "total_reports": 52,
+    "total_reports": 50,
     "date_range_start": "21/05/26",
-    "date_range_end": "01/07/26",
-    "total_photos": 117,
-    "avg_workers": 27.8,
-    "avg_equipment_types": 4.4
+    "date_range_end": "30/06/26",
+    "total_photos": 113,
+    "avg_workers": 27.9,
+    "avg_equipment_types": 4.5
   },
   "daily_reports": [
     {
       "date": "21/05/26",
       "shift": "Afternoon",
-      "weather": "",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -25,7 +25,7 @@
     {
       "date": "22/05/26",
       "shift": "Afternoon",
-      "weather": "",
+      "weather": "Cloudy (มีเมฆ)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -39,7 +39,7 @@
     {
       "date": "22/05/26",
       "shift": "Morning",
-      "weather": "",
+      "weather": "Cloudy (มีเมฆ)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -53,7 +53,7 @@
     {
       "date": "23/05/26",
       "shift": "Afternoon",
-      "weather": "",
+      "weather": "Cloudy (มีเมฆ)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -67,7 +67,7 @@
     {
       "date": "23/05/26",
       "shift": "Morning",
-      "weather": "",
+      "weather": "Cloudy (มีเมฆ)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -81,7 +81,7 @@
     {
       "date": "25/05/26",
       "shift": "Afternoon",
-      "weather": "",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -95,7 +95,7 @@
     {
       "date": "25/05/26",
       "shift": "Morning",
-      "weather": "",
+      "weather": "Cloudy (มีเมฆ)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -109,7 +109,7 @@
     {
       "date": "26/05/26",
       "shift": "Afternoon",
-      "weather": "",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -123,7 +123,7 @@
     {
       "date": "26/05/26",
       "shift": "Morning",
-      "weather": "",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
       "repco_personnel": 0,
       "state_workers_m": 0,
       "state_workers_w": 0,
@@ -1293,20 +1293,6 @@
       "hours": 11
     },
     {
-      "date": "29/06/26",
-      "shift": "Daily Report",
-      "weather": "",
-      "repco_personnel": 0,
-      "state_workers_m": 0,
-      "state_workers_w": 0,
-      "state_workers_total": 0,
-      "equipment": [],
-      "activity_goals": [],
-      "progress": [],
-      "photos": 0,
-      "hours": 0
-    },
-    {
       "date": "30/06/26",
       "shift": "Daily Report",
       "weather": "Sunny (ท้องฟ้าโปร่งใส)",
@@ -1330,36 +1316,6 @@
         "ปั้นจั่นเบอร์3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
         "ปั้นจั่นเบอร์6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
         "การประปามาเชื่อมน้ำประปาชั่วคราว"
-      ],
-      "progress": [
-        ""
-      ],
-      "photos": 4,
-      "hours": 11
-    },
-    {
-      "date": "01/07/26",
-      "shift": "Daily Report",
-      "weather": "Cloudy (มีเมฆ)",
-      "repco_personnel": 4,
-      "state_workers_m": 15,
-      "state_workers_w": 13,
-      "state_workers_total": 53,
-      "equipment": [
-        "รถแทร็กเตอร์ 1คัน",
-        "รถแบ็คโฮ  2คัน",
-        "รถบรรทุกน้ำ 1คัน",
-        "รถJCB 1คัน",
-        "ปั้นจั่น 6คัน",
-        "รถเครน35ตัน 1คัน"
-      ],
-      "activity_goals": [
-        "ปั้นจั่นเบอร์1 ตอกเสาเข็ม I-26x26x23m. พื้นที่แนวรั้ว",
-        "ปั้นจั่นเบอร์2ตอกเสาเข็ม I-26x26x25m.พื้นที่ WHA",
-        "ปั้นจั่นเบอร์4 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHA",
-        "ปั้นจั่นเบอร์5 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHA",
-        "ปั้นจั่นเบอร์6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ WHB",
-        "งานเตรียมการ(site temporary)"
       ],
       "progress": [
         ""

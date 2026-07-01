@@ -209,7 +209,7 @@
                     <div class="value" id="defected">-</div>
                 </div>
                 <div class="card">
-                    <h3>🔧 Rework</h3>
+                    <h3>🔧 Corrected</h3>
                     <div class="value" id="rework">-</div>
                 </div>
             </div>
@@ -329,7 +329,7 @@
             </div>
 
             <div class="section">
-                <h2>Issues - Defected & Rework Piles</h2>
+                <h2>Issues - Defected & Corrected Piles</h2>
                 <div id="issueTable"></div>
             </div>
         </div>
@@ -374,7 +374,7 @@
             });
             
             const areaColors = {'WHA': '#e74c3c', 'WHB': '#003d82', 'ROD': '#27ae60'};
-            const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)', 'Rework': 'rgba(230, 126, 34, 0.8)'};
+            const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)', 'Corrected': 'rgba(230, 126, 34, 0.8)'};
             
             if (charts.plannedGeo) charts.plannedGeo.destroy();
             const datasets = [];
@@ -458,7 +458,7 @@ async function loadJsonAndRefresh() {
             createTagElements('typeTags', types, 'type');
             const sizes = [...new Set(PILE_DATA.map(p => p.size).filter(s => s))].sort();
             createTagElements('sizeTags', sizes, 'size');
-            createTagElements('statusTags', ['Completed', 'Pending', 'Defected', 'Rework'], 'status');
+            createTagElements('statusTags', ['Completed', 'Pending', 'Defected', 'Corrected'], 'status');
 
             if (dates.length > 0) {
                 document.getElementById('dateFrom').value = dates[0];
@@ -567,7 +567,7 @@ async function loadJsonAndRefresh() {
             document.getElementById('pending').textContent = pending;
             document.getElementById('pendingPct').textContent = total > 0 ? Math.round(pending*100/total) + '%' : '0%';
             document.getElementById('defected').textContent = defected;
-            const rework = filtered.filter(p => p.status === 'Rework').length;
+            const rework = filtered.filter(p => p.status === 'Corrected').length;
             document.getElementById('rework').textContent = rework;
 
             const lengths = filtered.filter(p => p.actual_length).map(p => p.actual_length);
@@ -588,7 +588,7 @@ async function loadJsonAndRefresh() {
             // Update Planned Piles Map
             
             
-            // Update Rework Piles List
+            // Update Corrected Piles List
             const zones = {};
             filtered.forEach(p => {
                 if (!zones[p.area]) zones[p.area] = {total: 0, completed: 0};
@@ -683,7 +683,7 @@ async function loadJsonAndRefresh() {
             }));
 
             const areaColors = {'WHA': '#e74c3c', 'WHB': '#003d82', 'ROD': '#27ae60'};
-            const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)', 'Rework': 'rgba(230, 126, 34, 0.8)'};
+            const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)', 'Corrected': 'rgba(230, 126, 34, 0.8)'};
 
             if (charts.geo) charts.geo.destroy();
             const datasets = [];
@@ -741,7 +741,7 @@ async function loadJsonAndRefresh() {
         
 }
 
-            const issues = filtered.filter(p => p.status === 'Defected' || p.status === 'Rework').slice(0, 50);
+            const issues = filtered.filter(p => p.status === 'Defected' || p.status === 'Corrected').slice(0, 50);
             const tData = issues.map(p => ({
                 pile: p.pile_number,
                 area: p.area,
@@ -772,7 +772,7 @@ async function loadJsonAndRefresh() {
                     p.type,
                     p.length,
                     p.date,
-                    p.status === 'Defected' ? '⚠️ Defected' : (p.status === 'Rework' ? '🔧 Rework' : p.status),
+                    p.status === 'Defected' ? '⚠️ Defected' : (p.status === 'Corrected' ? '🔧 Corrected' : p.status),
                     p.problem
                 ]),
                 pagination: {limit: 10},

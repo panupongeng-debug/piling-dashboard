@@ -394,18 +394,24 @@
             // Weather Distribution
             const weatherCounts = {};
             reports.forEach(r => {
-                weatherCounts[r.weather] = (weatherCounts[r.weather] || 0) + 1;
+                const weather = r.weather || 'No Data';
+                weatherCounts[weather] = (weatherCounts[weather] || 0) + 1;
             });
+
+            const weatherLabels = Object.keys(weatherCounts).map(w =>
+                w === 'No Data' ? '⚠️ No Weather Data' : w
+            );
+            const weatherValues = Object.values(weatherCounts);
 
             if (charts.weather) charts.weather.destroy();
             const weatherCtx = document.getElementById('weatherChart').getContext('2d');
             charts.weather = new Chart(weatherCtx, {
                 type: 'pie',
                 data: {
-                    labels: Object.keys(weatherCounts),
+                    labels: weatherLabels,
                     datasets: [{
-                        data: Object.values(weatherCounts),
-                        backgroundColor: ['#27ae60', '#f39c12', '#e74c3c', '#3498db']
+                        data: weatherValues,
+                        backgroundColor: ['#f39c12', '#27ae60', '#e74c3c', '#3498db']
                     }]
                 },
                 options: { responsive: true, maintainAspectRatio: true }
@@ -448,34 +454,22 @@
                 const dateCode = dateParts[0] + dateParts[1] + dateParts[2];
                 const shareUrl = `https://scgo365.sharepoint.com/:f:/r/sites/INTERNAL_B-26-6530_RISEProject/INTERNAL%20PC%20Package/08.Construction/04.PICTURE%20PROGRESS/${dateCode}?csf=1&web=1&e=bDNob0`;
 
-                return {
-                    date: r.date,
-                    shift: r.shift,
-                    weather: r.weather,
-                    repco: r.repco_personnel,
-                    workers: r.state_workers_total,
-                    equipment: r.equipment.length,
-                    hours: r.hours,
-                    photos: r.photos,
-                    report: {
-                        content: gridjs.html(`<a href="${shareUrl}" target="_blank" class="share-link">📁 View</a>`)
-                    }
-                };
+                return [
+                    r.date,
+                    r.shift,
+                    r.weather,
+                    r.repco_personnel,
+                    r.state_workers_total,
+                    r.equipment.length,
+                    r.hours,
+                    r.photos,
+                    gridjs.html(`<a href="${shareUrl}" target="_blank" class="share-link">📁 View</a>`)
+                ];
             });
 
             document.getElementById('reportsTable').innerHTML = '';
             new gridjs.Grid({
-                columns: [
-                    { name: 'date', title: 'Date' },
-                    { name: 'shift', title: 'Shift' },
-                    { name: 'weather', title: 'Weather' },
-                    { name: 'repco', title: 'REPCO' },
-                    { name: 'workers', title: 'Workers' },
-                    { name: 'equipment', title: 'Equipment' },
-                    { name: 'hours', title: 'Hours' },
-                    { name: 'photos', title: 'Photos' },
-                    { name: 'report', title: 'Report' }
-                ],
+                columns: ['Date', 'Shift', 'Weather', 'REPCO', 'Workers', 'Equipment', 'Hours', 'Photos', 'Report'],
                 data: tableData,
                 pagination: { limit: 15 },
                 sort: true,
@@ -496,6 +490,12 @@
             const shift = document.getElementById('shiftFilter').value;
             const weather = document.getElementById('weatherFilter').value;
             const minWorkers = parseInt(document.getElementById('workersFilter').value) || 0;
+
+            console.log('🔍 Filter applied:');
+            console.log(`  Date: ${dateFromInput} to ${dateToInput}`);
+            console.log(`  Shift: ${shift}`);
+            console.log(`  Weather: ${weather}`);
+            console.log(`  Min Workers: ${minWorkers}`);
 
             // Convert date inputs (YYYY-MM-DD) to comparable format
             let dateFromComp = null, dateToComp = null;
@@ -526,6 +526,9 @@
 
                 return true;
             });
+
+            console.log(`✓ Filtered ${filtered.length} out of ${reports.length} reports`);
+            console.log('Filtered data:', filtered);
 
             renderTable(filtered);
             renderCharts(filtered);

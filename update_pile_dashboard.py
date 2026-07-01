@@ -48,9 +48,9 @@ def update_data():
         def get_status(row):
             remark = str(row['remark']).lower() if pd.notna(row['remark']) else ''
 
-            # Check for Rework keywords
+            # Check for Corrected keywords (piles that were corrected/reworked)
             if 'ตอกแซม' in remark or 'ซ่อม' in remark or 'ตอกใหม่' in remark:
-                return 'Rework'
+                return 'Corrected'
             # Check for Defected
             elif pd.notna(row['remark']) and str(row['remark']).strip() not in ['nan', '']:
                 return 'Defected'
@@ -90,12 +90,14 @@ def update_data():
         completed = sum(1 for p in data if p['status'] == 'Completed')
         pending = sum(1 for p in data if p['status'] == 'Pending')
         defected = sum(1 for p in data if p['status'] == 'Defected')
+        corrected = sum(1 for p in data if p['status'] == 'Corrected')
 
         print(f"\n📊 Statistics:")
         print(f"  Total: {len(data)}")
         print(f"  Completed: {completed}")
         print(f"  Pending: {pending}")
         print(f"  Defected: {defected}")
+        print(f"  Corrected: {corrected}")
 
         return True
 
