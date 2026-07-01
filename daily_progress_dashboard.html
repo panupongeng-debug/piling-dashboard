@@ -87,9 +87,30 @@
 
         .charts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-bottom: 15px;
+        }
+
+        .charts-grid .chart-container:first-child {
+            grid-column: 1;
+        }
+
+        .charts-grid .chart-container:nth-child(2) {
+            grid-column: 2;
+        }
+
+        .charts-grid .chart-container:last-child {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 1200px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            .charts-grid .chart-container {
+                grid-column: 1 !important;
+            }
         }
 
         .chart-container {
@@ -260,18 +281,18 @@
                 </div>
 
                 <div class="chart-container">
-                    <h3>🚜 Equipment Used</h3>
-                    <canvas id="equipmentChart"></canvas>
-                </div>
-
-                <div class="chart-container">
                     <h3>☀️ Weather Distribution</h3>
                     <canvas id="weatherChart"></canvas>
                 </div>
 
                 <div class="chart-container">
-                    <h3>📸 Photos per Day</h3>
-                    <canvas id="photosChart"></canvas>
+                    <h3>📈 Total Man Day (Cumulative)</h3>
+                    <canvas id="totalManDayChart"></canvas>
+                </div>
+
+                <div class="chart-container" style="grid-column: 1 / -1;">
+                    <h3>🚜 Equipment Types Breakdown</h3>
+                    <canvas id="equipmentTypesChart"></canvas>
                 </div>
             </div>
 
@@ -320,13 +341,11 @@
             container.innerHTML = '';
 
             const summary = DAILY_DATA.summary || {};
-            const reports = DAILY_DATA.daily_reports || [];
 
             const cards = [
                 { label: 'Total Days', value: summary.total_reports || 0 },
                 { label: 'Total Photos', value: summary.total_photos || 0 },
                 { label: 'Avg Workers/Day', value: summary.avg_workers || 0 },
-                { label: 'Avg Equipment Types', value: summary.avg_equipment_types || 0 },
             ];
 
             cards.forEach(card => {
@@ -343,45 +362,92 @@
         function renderCharts(filteredReports = null) {
             const reports = filteredReports || DAILY_DATA.daily_reports || [];
 
-            // Workers Chart
+            // Workers Chart - Cumulative (รวมสะสม)
             const dates = reports.map(r => r.date);
-            const workers = reports.map(r => r.state_workers_total);
+            const repcoPersonnel = reports.map(r => r.repco_personnel || 0);
+            const workersMale = reports.map(r => r.state_workers_m || 0);
+            const workersFemale = reports.map(r => r.state_workers_w || 0);
+            const workersOther = reports.map(r => {
+                const total = r.state_workers_total || 0;
+                const mf = (r.state_workers_m || 0) + (r.state_workers_w || 0);
+                return Math.max(0, total - mf);
+            });
+
+            // Calculate cumulative
+            let cumRepco = 0, cumMale = 0, cumFemale = 0, cumOther = 0;
+            const cumulativeData = reports.map((r, i) => {
+                cumRepco += repcoPersonnel[i];
+                cumMale += workersMale[i];
+                cumFemale += workersFemale[i];
+                cumOther += workersOther[i];
+                return {
+                    repco: cumRepco,
+                    male: cumMale,
+                    female: cumFemale,
+                    other: cumOther,
+                    total: cumRepco + cumMale + cumFemale + cumOther
+                };
+            });
 
             if (charts.workers) charts.workers.destroy();
             const workersCtx = document.getElementById('workersChart').getContext('2d');
             charts.workers = new Chart(workersCtx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: dates,
-                    datasets: [{
-                        label: 'Total Workers',
-                        data: workers,
-                        borderColor: '#27ae60',
-                        backgroundColor: 'rgba(39, 174, 96, 0.1)',
-                        tension: 0.4,
-                        fill: true
-                    }]
+                    datasets: [
+                        {
+                            label: 'REPCO Personnel',
+                            data: repcoPersonnel,
+                            backgroundColor: '#9b59b6'
+                        },
+                        {
+                            label: 'Male (M)',
+                            data: workersMale,
+                            backgroundColor: '#3498db'
+                        },
+                        {
+                            label: 'Female (W)',
+                            data: workersFemale,
+                            backgroundColor: '#e74c3c'
+                        },
+                        {
+                            label: 'Other Workers',
+                            data: workersOther,
+                            backgroundColor: '#f39c12'
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: true } }
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
                 }
             });
 
-            // Equipment Chart
-            const equipmentCounts = reports.map(r => r.equipment.length);
-            if (charts.equipment) charts.equipment.destroy();
-            const equipmentCtx = document.getElementById('equipmentChart').getContext('2d');
-            charts.equipment = new Chart(equipmentCtx, {
-                type: 'bar',
+            // Total Man Day Cumulative Chart
+            if (charts.totalManDay) charts.totalManDay.destroy();
+            const totalManDayCtx = document.getElementById('totalManDayChart').getContext('2d');
+            charts.totalManDay = new Chart(totalManDayCtx, {
+                type: 'line',
                 data: {
                     labels: dates,
                     datasets: [{
-                        label: 'Equipment Types',
-                        data: equipmentCounts,
-                        backgroundColor: '#27ae60'
+                        label: 'Total Man Day (Cumulative)',
+                        data: cumulativeData.map(d => d.total),
+                        borderColor: '#000',
+                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#000',
+                        fill: true
                     }]
                 },
                 options: {
@@ -418,25 +484,60 @@
                 options: { responsive: true, maintainAspectRatio: true }
             });
 
-            // Photos Chart
-            const photos = reports.map(r => r.photos);
-            if (charts.photos) charts.photos.destroy();
-            const photosCtx = document.getElementById('photosChart').getContext('2d');
-            charts.photos = new Chart(photosCtx, {
+            // Equipment Types Breakdown - Stacked bar chart
+            const equipmentTypeMap = {};
+            reports.forEach(r => {
+                r.equipment.forEach(item => {
+                    const match = item.match(/^([^0-9]+)\s*(\d+)/);
+                    if (match) {
+                        const type = match[1].trim();
+                        if (!equipmentTypeMap[type]) {
+                            equipmentTypeMap[type] = {};
+                        }
+                    }
+                });
+            });
+
+            // Get all unique equipment types
+            const allEquipmentTypes = Object.keys(equipmentTypeMap).sort();
+
+            // Count each type per day
+            const equipmentDatasets = allEquipmentTypes.map((type, idx) => {
+                const colors = ['#e74c3c', '#3498db', '#27ae60', '#f39c12', '#9b59b6', '#1abc9c', '#e67e22', '#34495e'];
+                return {
+                    label: type,
+                    data: reports.map(r => {
+                        let count = 0;
+                        r.equipment.forEach(item => {
+                            if (item.includes(type)) {
+                                const match = item.match(/(\d+)\s*คัน/);
+                                if (match) count += parseInt(match[1]);
+                            }
+                        });
+                        return count;
+                    }),
+                    backgroundColor: colors[idx % colors.length]
+                };
+            });
+
+            if (charts.equipmentTypes) charts.equipmentTypes.destroy();
+            const equipmentTypesCtx = document.getElementById('equipmentTypesChart').getContext('2d');
+            charts.equipmentTypes = new Chart(equipmentTypesCtx, {
                 type: 'bar',
                 data: {
                     labels: dates,
-                    datasets: [{
-                        label: 'Photos',
-                        data: photos,
-                        backgroundColor: '#27ae60'
-                    }]
+                    datasets: equipmentDatasets
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: true } }
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', maxHeight: 100 }
+                    }
                 }
             });
         }
