@@ -330,6 +330,12 @@
                         <input type="date" id="plannedDateTo" onchange="applyFilters()" style="width: 150px; padding: 6px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 12px;">
                     </div>
                 </div>
+                <div style="margin-bottom: 15px;">
+                    <button id="toggleNoPlanBtn" onclick="toggleNoPlanDate()" style="padding: 8px 12px; background: #95a5a6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 12px;">
+                        ☑️ Show Piles Without Planned Date
+                    </button>
+                    <span id="noPlanCountText" style="font-size: 11px; color: #666; margin-left: 10px;"></span>
+                </div>
                 <div class="geo-chart-box" style="width: 100%; background: white; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
                     <canvas id="plannedGeoChart"></canvas>
                 </div>
@@ -352,17 +358,40 @@
         let selectedSizes = [];
         let selectedStatus = '';
         let searchPlannedPile = '';
+        let showNoPlanDate = false;
 
-        
+
+        function toggleNoPlanDate() {
+            showNoPlanDate = !showNoPlanDate;
+            const btn = document.getElementById('toggleNoPlanBtn');
+            if (showNoPlanDate) {
+                btn.style.background = '#27ae60';
+                btn.textContent = '☑️ Showing Piles Without Planned Date';
+            } else {
+                btn.style.background = '#95a5a6';
+                btn.textContent = '☑️ Show Piles Without Planned Date';
+            }
+            updatePlannedMap();
+        }
+
         function updatePlannedMap() {
             const plannedDateFrom = document.getElementById('plannedDateFrom').value;
             const plannedDateTo = document.getElementById('plannedDateTo').value;
             const searchInput = document.getElementById('plannedPileSearch').value.trim();
 
+            // Piles with planned date
             const plannedPiles = PILE_DATA.filter(p => {
                 if (!p.n || !p.e) return false;
+                if (!p.planned_date || p.planned_date === '') return false;
                 if (plannedDateFrom && p.planned_date < plannedDateFrom) return false;
                 if (plannedDateTo && p.planned_date > plannedDateTo) return false;
+                return true;
+            });
+
+            // Piles WITHOUT planned date (but have coordinates)
+            const noPlanPiles = PILE_DATA.filter(p => {
+                if (!p.n || !p.e) return false;
+                if (p.planned_date && p.planned_date !== '') return false;
                 return true;
             });
 
@@ -385,8 +414,14 @@
                 searchResultText.textContent = '';
             }
 
-            // Update count
+            // Update count and no-plan count
             document.getElementById('plannedCount').textContent = plannedPiles.length;
+            const noPlanCountText = document.getElementById('noPlanCountText');
+            if (noPlanPiles.length > 0) {
+                noPlanCountText.textContent = `(${noPlanPiles.length} piles without planned date)`;
+            } else {
+                noPlanCountText.textContent = '';
+            }
 
             const zones = {};
             plannedPiles.forEach(p => {
@@ -422,6 +457,19 @@
                 }
                 datasets.push(config);
             });
+
+            // Add piles without planned date
+            if (showNoPlanDate && noPlanPiles.length > 0) {
+                datasets.push({
+                    label: `📌 No Planned Date (${noPlanPiles.length})`,
+                    data: noPlanPiles.map(p => ({x: parseFloat(p.e), y: parseFloat(p.n), pileNum: p.pile_number})),
+                    backgroundColor: 'rgba(149, 165, 166, 0.5)',
+                    borderColor: '#7f8c8d',
+                    borderWidth: 1,
+                    radius: 3,
+                    pointStyle: 'circle'
+                });
+            }
 
             // Add searched piles dataset with highlight
             if (searchedPiles.length > 0) {
