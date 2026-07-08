@@ -317,6 +317,13 @@
                     </div>
                 </div>
                 <div style="margin-bottom: 15px;">
+                    <label style="font-size: 12px; font-weight: 600; color: #999;">🔍 Search Pile Number:</label>
+                    <div style="margin-top: 8px; margin-bottom: 12px;">
+                        <input type="text" id="plannedPileSearch" placeholder="Enter pile number (e.g., 100, 205)" onchange="applyFilters()" style="width: 200px; padding: 6px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 12px; margin-right: 10px;">
+                        <span id="searchResultText" style="font-size: 11px; color: #666;"></span>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
                     <label style="font-size: 12px; font-weight: 600; color: #999;">📅 Filter Planned Date:</label>
                     <div style="margin-top: 8px;">
                         <input type="date" id="plannedDateFrom" onchange="applyFilters()" style="width: 150px; padding: 6px; border: 1px solid #d0d5dd; border-radius: 4px; font-size: 12px; margin-right: 10px;">
@@ -344,47 +351,68 @@
         let selectedTypes = [];
         let selectedSizes = [];
         let selectedStatus = '';
+        let searchPlannedPile = '';
 
         
         function updatePlannedMap() {
             const plannedDateFrom = document.getElementById('plannedDateFrom').value;
             const plannedDateTo = document.getElementById('plannedDateTo').value;
-            
+            const searchInput = document.getElementById('plannedPileSearch').value.trim();
+
             const plannedPiles = PILE_DATA.filter(p => {
                 if (!p.n || !p.e) return false;
                 if (plannedDateFrom && p.planned_date < plannedDateFrom) return false;
                 if (plannedDateTo && p.planned_date > plannedDateTo) return false;
                 return true;
             });
-            
+
+            // Filter searched piles
+            const searchedPiles = searchInput ? plannedPiles.filter(p =>
+                p.pile_number.toString().includes(searchInput)
+            ) : [];
+
+            // Update search result text
+            const searchResultText = document.getElementById('searchResultText');
+            if (searchInput) {
+                if (searchedPiles.length > 0) {
+                    searchResultText.textContent = `✓ Found ${searchedPiles.length} pile(s): ${searchedPiles.map(p => p.pile_number).join(', ')}`;
+                    searchResultText.style.color = '#27ae60';
+                } else {
+                    searchResultText.textContent = `✗ No pile found with number: ${searchInput}`;
+                    searchResultText.style.color = '#e74c3c';
+                }
+            } else {
+                searchResultText.textContent = '';
+            }
+
             // Update count
             document.getElementById('plannedCount').textContent = plannedPiles.length;
-            
+
             const zones = {};
             plannedPiles.forEach(p => {
                 if (!zones[p.area]) zones[p.area] = 0;
                 zones[p.area]++;
             });
-            
+
             const grouped = {};
             plannedPiles.forEach(p => {
                 const key = p.area + '_' + p.status;
                 if (!grouped[key]) grouped[key] = [];
                 grouped[key].push(p);
             });
-            
+
             const areaColors = {'WHA': '#e74c3c', 'WHB': '#003d82', 'ROD': '#27ae60'};
             const statusColors = {'Completed': 'rgba(39, 174, 96, 0.8)', 'Pending': 'rgba(200, 200, 200, 0.6)', 'Defected': 'rgba(231, 76, 60, 0.8)', 'Corrected': 'rgba(230, 126, 34, 0.8)'};
-            
+
             if (charts.plannedGeo) charts.plannedGeo.destroy();
             const datasets = [];
-            
+
             Object.keys(grouped).sort().forEach(key => {
                 const [area, status] = key.split('_');
                 const areaData = grouped[key];
                 const config = {
                     label: area + ' (' + status + ')',
-                    data: areaData.map(p => ({x: parseFloat(p.e), y: parseFloat(p.n)})),
+                    data: areaData.map(p => ({x: parseFloat(p.e), y: parseFloat(p.n), pileNum: p.pile_number})),
                     backgroundColor: statusColors[status] || '#95a5a6',
                     radius: status === 'Defected' ? 5 : 4
                 };
@@ -394,20 +422,42 @@
                 }
                 datasets.push(config);
             });
-            
+
+            // Add searched piles dataset with highlight
+            if (searchedPiles.length > 0) {
+                datasets.push({
+                    label: `🎯 Found: ${searchedPiles.map(p => p.pile_number).join(', ')}`,
+                    data: searchedPiles.map(p => ({x: parseFloat(p.e), y: parseFloat(p.n), pileNum: p.pile_number})),
+                    backgroundColor: 'rgba(255, 193, 7, 0.9)',
+                    borderColor: '#ff9800',
+                    borderWidth: 3,
+                    radius: 8,
+                    pointStyle: 'star'
+                });
+            }
+
             if (datasets.length === 0) {
                 document.getElementById('plannedGeoChart').style.display = 'none';
                 return;
             }
             document.getElementById('plannedGeoChart').style.display = 'block';
-            
+
             charts.plannedGeo = new Chart(document.getElementById('plannedGeoChart'), {
                 type: 'scatter',
                 data: {datasets: datasets},
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {legend: {position: 'top'}},
+                    plugins: {
+                        legend: {position: 'top'},
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Pile #' + context.raw.pileNum;
+                                }
+                            }
+                        }
+                    },
                     scales: {
                         x: {title: {display: true, text: 'East (E) Coordinate'}},
                         y: {title: {display: true, text: 'North (N) Coordinate'}}
