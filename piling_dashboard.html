@@ -395,8 +395,9 @@
                 return true;
             });
 
-            // Filter searched piles
-            const searchedPiles = searchInput ? plannedPiles.filter(p =>
+            // Filter searched piles (from ALL piles: both with and without planned_date)
+            const allPilesWithCoords = PILE_DATA.filter(p => p.n && p.e);
+            const searchedPiles = searchInput ? allPilesWithCoords.filter(p =>
                 p.pile_number.toString().includes(searchInput)
             ) : [];
 
