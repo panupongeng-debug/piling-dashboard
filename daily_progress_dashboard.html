@@ -30,7 +30,7 @@
         .header-title h1 { color: #27ae60; font-size: clamp(18px, 5vw, 28px); margin: 0; font-weight: 600; }
         .header-title p { color: #666; font-size: 11px; margin-top: 3px; }
 
-        .header-right { display: flex; gap: 8px; }
+        .header-right { display: flex; gap: 8px; align-items: center; }
         .btn {
             padding: 8px 12px;
             background: #27ae60;
@@ -40,9 +40,14 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 11px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
         }
 
         .btn:hover { background: #229954; }
+        .btn-back { background: #7f8c8d; }
+        .btn-back:hover { background: #5a6c7d; }
 
         .loading { text-align: center; padding: 40px; color: #999; }
         .error { color: #e74c3c; padding: 15px; background: #fadbd8; border-radius: 4px; margin-bottom: 20px; display: none; }
@@ -216,6 +221,7 @@
                 <p>RISE Project - Daily Construction Progress</p>
             </div>
             <div class="header-right">
+                <a href="index.html" class="btn btn-back">🏠 กลับไปหน้า Index</a>
                 <button class="btn" onclick="location.reload()">🔄 Refresh</button>
             </div>
         </div>

@@ -5,7 +5,7 @@ import pandas as pd
 import json
 import os
 
-EXCEL_FILE = r'C:\Users\panup\The Siam Cement Public Company Limited\B-26-6530_RISE Project - STC-REPCO\1.STC to REPCO\5.Others\Pile Progress Summary\Pile Log.xlsx'
+EXCEL_FILE = r'C:\Users\panup\The Siam Cement Public Company Limited\B-26-6530_RISE Project - STC-REPCO\1.STC to REPCO\5.Others\Pile Progress Summary\Pile Log VBA.xlsm'
 JSON_FILE = r'D:\Daily Report\Rise-dashboard\Data\pile_data.json'
 
 def update_data():

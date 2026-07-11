@@ -44,6 +44,8 @@
         .btn:hover { background: #002850; }
         .btn-update { background: #27ae60; }
         .btn-update:hover { background: #229954; }
+        .btn-back { background: #7f8c8d; text-decoration: none; display: inline-flex; align-items: center; }
+        .btn-back:hover { background: #5a6c7d; }
         
         .loading { text-align: center; padding: 20px; color: #999; font-size: 14px; }
         .error { color: #e74c3c; padding: 15px; background: #fadbd8; border-radius: 4px; margin-bottom: 20px; display: none; font-size: 13px; }
@@ -181,6 +183,7 @@
                 <p>Suwannaphum Rice Co., Ltd. - RISE Project</p>
             </div>
             <div class="header-right">
+                <a href="index.html" class="btn btn-back">🏠 กลับไปหน้า Index</a>
                 <button class="btn btn-update" onclick="updateData()">📊 Update Data</button>
                 <button class="btn" onclick="loadJsonAndRefresh()">🔄 Refresh</button>
             </div>
