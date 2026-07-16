@@ -3,15 +3,15 @@
     {
       "Unit": "",
       "Discipline": "Total",
-      "RFI Issued": 62.0,
-      "RFI Open (AF)": 26.0,
-      "RFI Cancelled(AF)": 12.0,
+      "RFI Issued": 68.0,
+      "RFI Open (AF)": 28.0,
+      "RFI Cancelled(AF)": 5.0,
       "RFI  Rejected(AF)": 0.0,
-      "RFI Completed (AF)": 24.0,
-      "FIR Completed (BC)": 24.0,
+      "RFI Completed (AF)": 35.0,
+      "FIR Completed (BC)": 35.0,
       "FIR Backlog": 0.0,
       "FIR Scanned": 0.0,
-      "FIR Blanc Scanned": 24.0
+      "FIR Blanc Scanned": 35.0
     }
   ],
   "rfi_open": [
@@ -125,7 +125,7 @@
       "Planned Inspection Date": "2026-06-19",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 48 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 15,
@@ -133,7 +133,7 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "",
       "Description of Inspection": "เหล็กข้ออ้อย 10 มม.จำนวน 100 เส้น 12 มม.จำนวน 1544 เส้น 25 มม.จำนวน 109 เส้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 16,
@@ -213,7 +213,7 @@
       "Planned Inspection Date": "2026-06-29",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x26 M จำนวน 40 ต้น ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 26,
@@ -229,7 +229,7 @@
       "Planned Inspection Date": "2026-06-27",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0 .26x12 M จำนวน 50 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 28,
@@ -237,7 +237,7 @@
       "Planned Inspection Date": "2026-06-25",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 35 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 29,
@@ -258,18 +258,18 @@
     {
       "No.": 31,
       "RFI No.": "B266530-RFI-REP-CV-0031",
-      "Planned Inspection Date": "2026-06-29",
+      "Planned Inspection Date": "2026-06-26",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0 .26x26 M จำนวน 40 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 32,
       "RFI No.": "B266530-RFI-REP-CV-0032",
-      "Planned Inspection Date": "2026-06-28",
+      "Planned Inspection Date": "2026-06-27",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 35 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 33,
@@ -277,7 +277,7 @@
       "Planned Inspection Date": "2026-07-02",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 34,
@@ -293,7 +293,7 @@
       "Planned Inspection Date": "2026-06-30",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x22 M จำนวน 8 ต้น ขนาด 0.26x0.26x26 M จำนวน 8 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 36,
@@ -317,7 +317,7 @@
       "Planned Inspection Date": "2026-07-01",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 4 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 39,
@@ -421,7 +421,7 @@
       "Planned Inspection Date": "2026-07-06",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 12 ต้น ขนาด I.26 ยาว 13 M จำนวน 62 ท่อน",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 52,
@@ -429,15 +429,15 @@
       "Planned Inspection Date": "2026-07-06",
       "ITP Description": "",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 53,
       "RFI No.": "B266530-RFI-REP-CV-0053",
       "Planned Inspection Date": "2026-07-07",
       "ITP Description": "",
-      "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 32 ต้น ขนาด I.26 ยาว 13 M จำนวน 38 ท่อน ขนาด I.35 ยาว 13 M จำนวน 10 ท่อน",
+      "Inspection Result": "Approved"
     },
     {
       "No.": 54,
@@ -450,10 +450,10 @@
     {
       "No.": 55,
       "RFI No.": "B266530-RFI-REP-CV-0055",
-      "Planned Inspection Date": "",
+      "Planned Inspection Date": "2026-07-13",
       "ITP Description": "",
-      "Description of Inspection": "",
-      "Inspection Result": ""
+      "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
+      "Inspection Result": "Approved"
     },
     {
       "No.": 56,
@@ -521,59 +521,59 @@
     },
     {
       "No.": 64,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0064",
+      "Planned Inspection Date": "2026-07-12",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 65,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0065",
+      "Planned Inspection Date": "2026-07-12",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 66,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0066",
+      "Planned Inspection Date": "2026-07-14",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 67,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0067",
+      "Planned Inspection Date": "2026-07-13",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 68,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0068",
+      "Planned Inspection Date": "2026-07-13",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "Approved"
     },
     {
       "No.": 69,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0069",
+      "Planned Inspection Date": "2026-07-15",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "\"Select\""
     },
     {
       "No.": 70,
-      "RFI No.": "",
-      "Planned Inspection Date": "",
-      "ITP Description": "1970-01-01",
+      "RFI No.": "B266530-RFI-REP-CV-0070",
+      "Planned Inspection Date": "2026-07-15",
+      "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "\"Select\""
     },
     {
       "No.": 71,
