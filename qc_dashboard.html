@@ -82,6 +82,18 @@
             padding: 20px;
             border-radius: 6px;
             text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .summary-card.active {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+            transform: scale(1.05);
         }
 
         .summary-card h3 { font-size: 11px; text-transform: uppercase; margin-bottom: 8px; opacity: 0.9; }
@@ -159,6 +171,8 @@
 
     <script>
         let QC_DATA = [];
+        let currentFilter = null;
+        let gridInstance = null;
 
         async function loadData() {
             try {
@@ -211,20 +225,23 @@
                             <h3>${col}</h3>
                             <div class="value">${displayValue}</div>
                         `;
+                        card.onclick = () => filterByStatus(col, card);
                         container.appendChild(card);
                     }
                 }
             });
         }
 
-        function renderRFI() {
-            if (!QC_DATA.rfi_open || QC_DATA.rfi_open.length === 0) {
-                document.getElementById('rfiTable').innerHTML = '<p style="padding: 20px; text-align: center; color: #999;">No RFI items with Accepted status</p>';
+        function renderRFI(filteredData = null) {
+            const dataToDisplay = filteredData || QC_DATA.rfi_open || [];
+
+            if (!dataToDisplay || dataToDisplay.length === 0) {
+                document.getElementById('rfiTable').innerHTML = '<p style="padding: 20px; text-align: center; color: #999;">No RFI items found</p>';
                 return;
             }
 
             const columns = QC_DATA.rfi_columns || [];
-            const rfiData = QC_DATA.rfi_open.map(item => {
+            const rfiData = dataToDisplay.map(item => {
                 const row = [];
                 columns.forEach(col => {
                     row.push(String(item[col] || '-').substring(0, 100));
@@ -232,14 +249,64 @@
                 return row;
             });
 
-            document.getElementById('rfiTable').innerHTML = '';
+            // Clear and recreate table
+            const tableContainer = document.getElementById('rfiTable');
+            tableContainer.innerHTML = '';
+
             new gridjs.Grid({
                 columns: columns,
                 data: rfiData,
                 pagination: {limit: 15},
                 sort: true,
                 search: true
-            }).render(document.getElementById('rfiTable'));
+            }).render(tableContainer);
+        }
+
+        function filterByStatus(statusName, cardElement) {
+            // Remove active state from all cards
+            document.querySelectorAll('.summary-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Toggle filter
+            if (currentFilter === statusName) {
+                // Clicking same card again - clear filter
+                currentFilter = null;
+                renderRFI();
+            } else {
+                // Set new filter
+                currentFilter = statusName;
+                cardElement.classList.add('active');
+
+                // Filter RFI data based on status name and RFI Status column
+                const filtered = QC_DATA.rfi_open.filter(item => {
+                    const rfiStatus = String(item['RFI Status'] || '').trim();
+                    const firStatus = String(item['FIR Status'] || '').trim();
+                    const firScanned = String(item['FIR Scanned'] || '').trim();
+
+                    // Filter by Excel formula logic (Column AF = RFI Status, Column BC = FIR Status)
+                    if (statusName.includes('RFI Open')) {
+                        return rfiStatus === 'Open';
+                    } else if (statusName.includes('RFI Cancelled')) {
+                        return rfiStatus === 'Cancelled';
+                    } else if (statusName.includes('RFI Rejected')) {
+                        return rfiStatus === 'Rejected';
+                    } else if (statusName.includes('RFI Completed')) {
+                        return rfiStatus === 'Completed';
+                    } else if (statusName.includes('FIR Completed')) {
+                        return firStatus === 'Completed';
+                    } else if (statusName.includes('FIR Backlog')) {
+                        // Backlog = FIR Completed (RFI) but NOT FIR Completed (BC)
+                        return rfiStatus === 'Completed' && firStatus !== 'Completed';
+                    } else if (statusName.includes('FIR Scanned')) {
+                        return firScanned && firScanned !== '';
+                    }
+                    return true;
+                });
+
+                console.log(`Filter: "${statusName}" → Found ${filtered.length} items`);
+                renderRFI(filtered);
+            }
         }
 
         // Initialize

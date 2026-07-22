@@ -21,7 +21,9 @@
       "Planned Inspection Date": "2026-06-10",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x13 M จำนวน 8 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 2,
@@ -29,7 +31,9 @@
       "Planned Inspection Date": "2026-06-10",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 2  ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 3,
@@ -37,7 +41,9 @@
       "Planned Inspection Date": "2026-06-11",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 26 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 4,
@@ -45,7 +51,9 @@
       "Planned Inspection Date": "2026-06-11",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 1  ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 5,
@@ -53,7 +61,9 @@
       "Planned Inspection Date": "2026-06-12",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 18 ท่อน ขนาด 0.26x0.26x13 M จำนวน 8 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 6,
@@ -61,7 +71,9 @@
       "Planned Inspection Date": "2026-06-14",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 18 ท่อน ขนาด 0.26x0.26x13 M จำนวน 8 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 7,
@@ -69,7 +81,9 @@
       "Planned Inspection Date": "2026-06-14",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 5 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 8,
@@ -77,7 +91,9 @@
       "Planned Inspection Date": "2026-06-15",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 18 ท่อน ขนาด 0.26x0.26x13 M จำนวน 18 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 9,
@@ -85,7 +101,9 @@
       "Planned Inspection Date": "2026-06-15",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 16 ท่อน ขนาด 0.26x0.26x13 M จำนวน 8 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 10,
@@ -93,7 +111,9 @@
       "Planned Inspection Date": "2026-06-18",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 24 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 11,
@@ -101,7 +121,9 @@
       "Planned Inspection Date": "2026-06-18",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 21 ท่อน ขนาด 0.26x0.26x13 M จำนวน 5 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 12,
@@ -109,7 +131,9 @@
       "Planned Inspection Date": "2026-06-17",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 22  ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 13,
@@ -117,7 +141,9 @@
       "Planned Inspection Date": "2026-06-20",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 4 ท่อน ขนาด 0.26x0.26x13 M จำนวน 12 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 14,
@@ -125,7 +151,9 @@
       "Planned Inspection Date": "2026-06-16",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 5 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 15,
@@ -133,7 +161,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Material Submission-Material Approval (Rebar, Concrete, Precast, Steel, Paint, etc.)",
       "Description of Inspection": "เหล็กข้ออ้อย 10 มม.จำนวน 100 เส้น 12 มม.จำนวน 318 เส้น 16 มม. จำนวน 1544 เส้น 25 มม.จำนวน 109 เส้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 16,
@@ -141,7 +171,9 @@
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 14 ท่อน ขนาด 0.26x0.26x13 M จำนวน 16 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน (4DB16200)",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 17,
@@ -149,7 +181,9 @@
       "Planned Inspection Date": "2026-06-19",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 22 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 18,
@@ -157,7 +191,9 @@
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 18 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 19,
@@ -165,7 +201,9 @@
       "Planned Inspection Date": "2026-06-22",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0 .26x12 M จำนวน 16 ท่อน ขนาด 0.26x0.26x13 M จำนวน 20 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน (4DB16200)",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 20,
@@ -173,7 +211,9 @@
       "Planned Inspection Date": "2026-06-21",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 16 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 21,
@@ -181,7 +221,9 @@
       "Planned Inspection Date": "2026-06-20",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 5 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 22,
@@ -189,7 +231,9 @@
       "Planned Inspection Date": "2026-06-23",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0 .26x12 M จำนวน 14 ท่อน ขนาด 0.26x0.26x13 M จำนวน 16 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน ขนาด 0.35x0.35x13 M จำนวน 4 ท่อน (4DB16200)",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 23,
@@ -197,7 +241,9 @@
       "Planned Inspection Date": "2026-06-24",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x22 M จำนวน 7 ต้น ขนาด 0.26x0.26x26 M จำนวน 4 ท่อน ขนาด 0.35x0.35x26 M จำนวน 5 ท่อน (4DB16200)",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 24,
@@ -205,7 +251,9 @@
       "Planned Inspection Date": "2026-06-23",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 34  ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 25,
@@ -213,7 +261,9 @@
       "Planned Inspection Date": "2026-06-29",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x26 M จำนวน 40 ต้น ",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 26,
@@ -221,7 +271,9 @@
       "Planned Inspection Date": "2026-06-26",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 35 ต้น ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Cancelled",
+      "FIR Status": "Cancelled"
     },
     {
       "No.": 27,
@@ -229,7 +281,9 @@
       "Planned Inspection Date": "2026-06-27",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจรับเสาเข็มขนาด 0.26x0 .26x12 M จำนวน 30 ท่อนเสาเข็ม I26 ยาว 11 M จำนวน 10 ท่อน เสาเข็ม I26 ยาว 13 M จำนวน 20 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 28,
@@ -237,7 +291,9 @@
       "Planned Inspection Date": "2026-06-25",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 35 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 29,
@@ -245,7 +301,9 @@
       "Planned Inspection Date": "2026-06-27",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 50  ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Cancelled",
+      "FIR Status": "Cancelled"
     },
     {
       "No.": 30,
@@ -253,7 +311,9 @@
       "Planned Inspection Date": "2026-06-27",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 27 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Cancelled",
+      "FIR Status": "Cancelled"
     },
     {
       "No.": 31,
@@ -261,7 +321,9 @@
       "Planned Inspection Date": "2026-06-26",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0 .26x26 M จำนวน 40 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 32,
@@ -269,7 +331,9 @@
       "Planned Inspection Date": "2026-06-28",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 35 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 33,
@@ -277,7 +341,9 @@
       "Planned Inspection Date": "2026-07-02",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 34,
@@ -285,7 +351,9 @@
       "Planned Inspection Date": "2026-06-29",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 40 ต้น",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Cancelled",
+      "FIR Status": "Cancelled"
     },
     {
       "No.": 35,
@@ -293,7 +361,9 @@
       "Planned Inspection Date": "2026-06-30",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 8 ท่อน เสาเข็มขนาด I26 ยาว 11 M จำนวน 18 ท่อน เสาเข็มขนาด I26 ยาว 57 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 36,
@@ -301,7 +371,9 @@
       "Planned Inspection Date": "2026-06-30",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบงานเสาเข็ม I 26x26 จำนวน 48 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 37,
@@ -309,7 +381,9 @@
       "Planned Inspection Date": "2026-07-01",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน ….. ต้น ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Cancelled",
+      "FIR Status": "Cancelled"
     },
     {
       "No.": 38,
@@ -317,7 +391,9 @@
       "Planned Inspection Date": "2026-07-01",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 4 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 39,
@@ -325,7 +401,9 @@
       "Planned Inspection Date": "2026-07-02",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 40,
@@ -333,7 +411,9 @@
       "Planned Inspection Date": "2026-07-03",
       "ITP Description": "Excavation -Subgrade( Before Lean Concrete)",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 41,
@@ -341,7 +421,9 @@
       "Planned Inspection Date": "2026-07-03",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "เทลีน 4 ฐาน (GL.1/A') (GL.2/A') (GL.3/A') (GL.4/A')",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 42,
@@ -349,7 +431,9 @@
       "Planned Inspection Date": "2026-07-03",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 43,
@@ -357,7 +441,9 @@
       "Planned Inspection Date": "2026-07-03",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 44,
@@ -365,7 +451,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบงานเสาเข็ม I 26x26 จำนวน 27 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 45,
@@ -373,7 +461,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Inspection Before Placing Concrete\n(Size, Reinforcement Spacing, Covering, Cleanliness of Formwork and support, MEP sleeve, Temperature, Slump and Concrete Specimen)",
       "Description of Inspection": "เทลีน 4 ฐาน (GL.5/A') (GL.6/A') (GL.7/A') (GL.8/A')",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 46,
@@ -381,7 +471,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน ….. ต้น ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 47,
@@ -389,7 +481,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 48,
@@ -397,7 +491,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "เทลีน 4 ฐาน (GL.5/A') (GL.6/A') (GL.7/A') (GL.8/A')",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Open"
     },
     {
       "No.": 49,
@@ -405,7 +501,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Pile Cut-off Level & Deviation",
       "Description of Inspection": "(GL.1/A')",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 50,
@@ -413,7 +511,9 @@
       "Planned Inspection Date": "2026-07-06",
       "ITP Description": "Benchmarks & Control Points Handover",
       "Description of Inspection": "Coordinates match Owner's dat / BM protected",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 51,
@@ -421,7 +521,9 @@
       "Planned Inspection Date": "2026-07-04",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 22 ท่อน I26 ยาว 13 M จำนวน 46 ท่อน ขนาด I35 ยาว 13 M จำนวน 4 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 52,
@@ -429,7 +531,9 @@
       "Planned Inspection Date": "2026-07-06",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 จำนวน 30 ต้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 53,
@@ -437,7 +541,9 @@
       "Planned Inspection Date": "2026-07-07",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจสอบรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 32 ต้น ขนาด I.26 ยาว 13 M จำนวน 38 ท่อน ขนาด I.35 ยาว 13 M จำนวน 10 ท่อน",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 54,
@@ -445,7 +551,9 @@
       "Planned Inspection Date": "2026-07-07",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 55,
@@ -453,7 +561,9 @@
       "Planned Inspection Date": "2026-07-13",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 56,
@@ -461,7 +571,9 @@
       "Planned Inspection Date": "2026-07-08",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 57,
@@ -469,7 +581,9 @@
       "Planned Inspection Date": "2026-07-09",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 58,
@@ -477,7 +591,9 @@
       "Planned Inspection Date": "2026-07-09",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "เทลิน 6 ฐาน ห้องน้ำ",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Open"
     },
     {
       "No.": 59,
@@ -485,7 +601,9 @@
       "Planned Inspection Date": "2026-07-10",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "ตรวจสอบ การตอกเสาเข็ม I 26x26 ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 60,
@@ -493,7 +611,9 @@
       "Planned Inspection Date": "2026-07-10",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 61,
@@ -501,7 +621,9 @@
       "Planned Inspection Date": "2026-07-11",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "Footing ",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 62,
@@ -509,7 +631,9 @@
       "Planned Inspection Date": "2026-07-11",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 63,
@@ -517,7 +641,9 @@
       "Planned Inspection Date": "2026-07-11",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 64,
@@ -525,7 +651,9 @@
       "Planned Inspection Date": "2026-07-12",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 65,
@@ -533,7 +661,9 @@
       "Planned Inspection Date": "2026-07-12",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 66,
@@ -541,7 +671,9 @@
       "Planned Inspection Date": "2026-07-14",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 67,
@@ -549,7 +681,9 @@
       "Planned Inspection Date": "2026-07-13",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 68,
@@ -557,7 +691,9 @@
       "Planned Inspection Date": "2026-07-13",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 69,
@@ -565,7 +701,9 @@
       "Planned Inspection Date": "2026-07-15",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 70,
@@ -573,7 +711,9 @@
       "Planned Inspection Date": "2026-07-15",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "\"Select\""
+      "Inspection Result": "\"Select\"",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 71,
@@ -581,7 +721,9 @@
       "Planned Inspection Date": "2026-07-01",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "ตรวจรับเสาเข็มขนาด 0.26x0.26x12 M จำนวน 24 ท่อน เสาเข็ม I.26 ยาว 13 M จำนวน 56 ท่อน ",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Completed",
+      "FIR Status": "Completed"
     },
     {
       "No.": 72,
@@ -589,7 +731,9 @@
       "Planned Inspection Date": "2026-07-16",
       "ITP Description": "Material Receiving Inspection ",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 73,
@@ -597,7 +741,9 @@
       "Planned Inspection Date": "2026-07-15",
       "ITP Description": "Material Submission-Material Approval (Rebar, Concrete, Precast, Steel, Paint, etc.)",
       "Description of Inspection": "รับเหล็กเส้น",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 74,
@@ -605,7 +751,9 @@
       "Planned Inspection Date": "2026-07-19",
       "ITP Description": "Pile Driving/ Installation Inspection and Record (Blow  Count/Torque)",
       "Description of Inspection": "",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 75,
@@ -613,7 +761,9 @@
       "Planned Inspection Date": "2026-07-15",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "เทLean Concrete คานห้องน้ำ",
-      "Inspection Result": "Approved"
+      "Inspection Result": "Approved",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 76,
@@ -621,7 +771,9 @@
       "Planned Inspection Date": "2026-07-17",
       "ITP Description": "Concrete Mix &Trial Mix Design",
       "Description of Inspection": "Concrete Mix & Trial Mix Design",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 77,
@@ -629,7 +781,9 @@
       "Planned Inspection Date": "2026-07-19",
       "ITP Description": "Lean Concrete Pouring",
       "Description of Inspection": "เทคานคอดิน ห้องน้ำ",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "Open",
+      "FIR Status": "Open"
     },
     {
       "No.": 78,
@@ -637,7 +791,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 79,
@@ -645,7 +801,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 80,
@@ -653,7 +811,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 81,
@@ -661,7 +821,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 82,
@@ -669,7 +831,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 83,
@@ -677,7 +841,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 84,
@@ -685,7 +851,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 85,
@@ -693,7 +861,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 86,
@@ -701,7 +871,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 87,
@@ -709,7 +881,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 88,
@@ -717,7 +891,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 89,
@@ -725,7 +901,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 90,
@@ -733,7 +911,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 91,
@@ -741,7 +921,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 92,
@@ -749,7 +931,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 93,
@@ -757,7 +941,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 94,
@@ -765,7 +951,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 95,
@@ -773,7 +961,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 96,
@@ -781,7 +971,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 97,
@@ -789,7 +981,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 98,
@@ -797,7 +991,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 99,
@@ -805,7 +1001,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     },
     {
       "No.": 100,
@@ -813,7 +1011,9 @@
       "Planned Inspection Date": "",
       "ITP Description": "",
       "Description of Inspection": "",
-      "Inspection Result": ""
+      "Inspection Result": "",
+      "RFI Status": "",
+      "FIR Status": ""
     }
   ],
   "summary_columns": [
@@ -835,6 +1035,8 @@
     "Planned Inspection Date",
     "ITP Description",
     "Description of Inspection",
-    "Inspection Result"
+    "Inspection Result",
+    "RFI Status",
+    "FIR Status"
   ]
 }

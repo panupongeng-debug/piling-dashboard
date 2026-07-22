@@ -70,20 +70,18 @@ def update_qc_data():
 
         print("\n📄 Selecting columns A, E, F, I, J, AE...")
 
-        # Column indices (0-based)
-        selected_indices = [0, 4, 5, 8, 9, 30]  # A, E, F, I, J, AE
+        # Column indices (0-based): A, E, F, I, J, AE, AF, BC
+        # AF is column 32 (0-indexed: 31), BC is column 55 (0-indexed: 54)
+        selected_indices = [0, 4, 5, 8, 9, 30, 31, 54]  # A, E, F, I, J, AE, AF, BC
 
         # Check if indices are valid
         valid_indices = [idx for idx in selected_indices if idx < len(rfi_data_clean.columns)]
 
         print(f"✓ Valid indices: {valid_indices}")
+        print(f"✓ Total columns available: {len(rfi_data_clean.columns)}")
 
-        if len(valid_indices) < 6:
-            print(f"⚠️ Warning: Only {len(valid_indices)} columns available out of 6 requested")
-            # Try without Column AE (index 30)
-            selected_indices = [0, 4, 5, 8, 9]
-            valid_indices = [idx for idx in selected_indices if idx < len(rfi_data_clean.columns)]
-            print(f"✓ Fallback to 5 columns: {valid_indices}")
+        if len(valid_indices) < len(selected_indices):
+            print(f"⚠️ Warning: Only {len(valid_indices)} columns available out of {len(selected_indices)} requested")
 
         # Create filtered dataframe with selected columns
         rfi_filtered = rfi_data_clean.iloc[:, valid_indices].copy()
@@ -95,7 +93,9 @@ def update_qc_data():
             'Planned Inspection Date',
             'ITP Description',
             'Description of Inspection',
-            'Inspection Result'
+            'Inspection Result',
+            'RFI Status',
+            'FIR Status'
         ]
 
         # Trim to match available columns
