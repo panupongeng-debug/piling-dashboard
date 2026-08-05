@@ -52,13 +52,19 @@ def update_data():
 
             remark = str(row['remark']).lower() if pd.notna(row['remark']) else ''
 
+            # WVR งานเพิ่ม - treat as normal (not defected)
+            if 'wvr' in remark and 'งานเพิ่ม' in remark:
+                # Skip defect check and go to completion checks
+                pass
             # Check for Corrected keywords (piles that were corrected/reworked)
-            if 'ตอกแซม' in remark or 'ซ่อม' in remark or 'ตอกใหม่' in remark:
+            elif 'ตอกแซม' in remark or 'ซ่อม' in remark or 'ตอกใหม่' in remark:
                 return 'Corrected'
-            # Check for Defected
+            # Check for Defected (but not WVR งานเพิ่ม)
             elif pd.notna(row['remark']) and str(row['remark']).strip() not in ['nan', '']:
                 return 'Defected'
-            elif pd.notna(row['weld_inspection']) and row['weld_inspection'] == 'Accept':
+
+            # Check completion status
+            if pd.notna(row['weld_inspection']) and row['weld_inspection'] == 'Accept':
                 return 'Completed'
             elif pd.notna(row['piled_date']):
                 return 'Completed'
