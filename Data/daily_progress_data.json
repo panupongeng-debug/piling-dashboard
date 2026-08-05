@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_reports": 80,
+    "total_reports": 83,
     "date_range_start": "21/05/26",
-    "date_range_end": "01/08/26",
-    "total_photos": 237,
-    "avg_workers": 44.9,
+    "date_range_end": "04/08/26",
+    "total_photos": 255,
+    "avg_workers": 46.9,
     "avg_equipment_types": 5.1
   },
   "daily_reports": [
@@ -2297,6 +2297,100 @@
         ""
       ],
       "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "02/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 1,
+      "state_workers_m": 21,
+      "state_workers_w": 21,
+      "state_workers_total": 88,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 9คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-30x30x25m. พื้นที่ WSB",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 8 ตอกเสาเข็ม I-35x35x26m. พื้นที่ WHB",
+        "ปั้นจั่นเบอร์ 9 ตอกเสาเข็ม I-35x35x25m. พื้นที่ WHB",
+        "งานผูกเหล็กเสาPrecast ที่ State Workshop"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 9
+    },
+    {
+      "date": "03/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 5,
+      "state_workers_m": 27,
+      "state_workers_w": 21,
+      "state_workers_total": 105,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 8คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 1 ตอกเสาเข็ม I-26x26x24m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 2 ตอกเสาเข็ม I-26x26x26m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-30x30x25m. พื้นที่ WSB",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 8 ตอกเสาเข็ม I-35x35x26m. พื้นที่ WHB",
+        "ปั้นจั่นเบอร์ 9 เดินทดสอบ Dynamic load test พื้นที่ WHA",
+        "งานผูกเหล็กเสาPrecast ที่ State Workshop"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "04/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 5,
+      "state_workers_m": 26,
+      "state_workers_w": 23,
+      "state_workers_total": 110,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 8คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 1 ตอกเสาเข็ม I-26x26x24m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 2 ตอกเสาเข็ม I-26x26x26m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-30x30x25m. พื้นที่ WSB",
+        "ปั้นจั่นเบอร์ 5 ตอกเสาเข็ม I-26x26x26m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 8 ตอกเสาเข็ม I-35x35x26m. พื้นที่ WHB",
+        "ปั้นจั่นเบอร์ 9 เดินทดสอบ Dynamic load test พื้นที่ WHB",
+        "งานทดสอบ Seismic เสาเข็ม WHA,WHB",
+        "งานผูกเหล็กเสาPrecast ที่ State Workshop",
+        "งานเทคอนกรีต Precast กำแพงกันดิน"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 8,
       "hours": 9
     }
   ]
