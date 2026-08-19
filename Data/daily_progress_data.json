@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_reports": 86,
+    "total_reports": 93,
     "date_range_start": "21/05/26",
-    "date_range_end": "07/08/26",
-    "total_photos": 275,
-    "avg_workers": 49.0,
-    "avg_equipment_types": 5.1
+    "date_range_end": "15/08/26",
+    "total_photos": 313,
+    "avg_workers": 52.2,
+    "avg_equipment_types": 5.2
   },
   "daily_reports": [
     {
@@ -2475,6 +2475,211 @@
         "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
         "งานขุดเทลีนฐานรากอาคาร WHA",
         "งานผูกเหล็กเสาPrecastและเตรียมแบบหล่อ ที่ State Workshop"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "08/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 26,
+      "state_workers_w": 22,
+      "state_workers_total": 106,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 7คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 1 ตอกเสาเข็ม I-26x26x24m. พื้นที่รางน้ำ",
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "งานผูกเหล็กฐานรากอาคาร WHA",
+        "งานผูกเหล็กเสาPrecastและเตรียมแบบหล่อ ที่ State Workshop",
+        "ทดสอบDynamic load testและSeismic test อาคาร WHA,WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 9
+    },
+    {
+      "date": "10/08/26",
+      "shift": "Daily Report",
+      "weather": "Rainy (ฝนตก)",
+      "repco_personnel": 6,
+      "state_workers_m": 24,
+      "state_workers_w": 23,
+      "state_workers_total": 96,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 1 ตอกเสาเข็ม I-26x26x24m. พื้นที่รางน้ำ",
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "งานผูกเหล็กฐานรากอาคาร WHA",
+        "งานผูกเหล็กเสาPrecastและเตรียมแบบหล่อ ที่ State Workshop",
+        "ทดสอบDynamic load testและSeismic test อาคาร MPB,WSB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "11/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 28,
+      "state_workers_w": 26,
+      "state_workers_total": 101,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่นเบอร์ 3 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "ปั้นจั่นเบอร์ 6 ตอกเสาเข็ม I-26x26x25m. พื้นที่ ROD",
+        "งานเทคอนกรีตฐานรากอาคาร WHA GL.A’จำนวน7ฐาน",
+        "งานเทคอนกรีตPrecast รางน้ำ",
+        "งานผูกเหล็กเสาPrecastและเตรียมแบบหล่อ ที่ State Workshop"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "12/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 16,
+      "state_workers_w": 19,
+      "state_workers_total": 41,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "งานทาน้ำยาคอนกรีตฐานรากอาคาร WHA GL.A’",
+        "งานผูกเหล็กฐานราก WHA GL.1’",
+        "งานปรับทางเข้าไซต์งานและติดตั้งป้าย"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 9
+    },
+    {
+      "date": "13/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 27,
+      "state_workers_w": 24,
+      "state_workers_total": 102,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่น 3 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "ปั้นจั่น 4 ตอกเสาเข็ม I-35 พื้นที่ WHB",
+        "งานทดสอบ Seismic พื้นที่ WHB",
+        "งานผูกเหล็กฐานราก WHA GL.1’",
+        "งานเทฝารางน้ำ",
+        "งานกลบดินบดอัดดิน WHA GL.A’",
+        "งานworkshop เตรียมแบบหล่อเสาPrecast"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "14/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 28,
+      "state_workers_w": 25,
+      "state_workers_total": 104,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่น 1 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "ปั้นจั่น 3 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "ปั้นจั่น 6 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "งานเทคอนกรีตฐานราก WHA GL.1’",
+        "งานเทลีนฐานราก WHB GL.1’",
+        "งานworkshop เตรียมแบบหล่อเสาPrecast"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "15/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 25,
+      "state_workers_w": 24,
+      "state_workers_total": 96,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่น 4 ตอกเสาเข็ม I-26 พื้นที่ WHB",
+        "งานเทลีนฐานราก WHB",
+        "งานผูกเหล็กคานGB พื้นที่ WHA GL.A’",
+        "งานworkshop เตรียมแบบหล่อเสาPrecast"
       ],
       "progress": [
         ""
