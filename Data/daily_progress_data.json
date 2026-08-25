@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_reports": 93,
+    "total_reports": 101,
     "date_range_start": "21/05/26",
-    "date_range_end": "15/08/26",
-    "total_photos": 313,
-    "avg_workers": 52.2,
+    "date_range_end": "24/08/26",
+    "total_photos": 361,
+    "avg_workers": 55.6,
     "avg_equipment_types": 5.2
   },
   "daily_reports": [
@@ -2686,6 +2686,239 @@
       ],
       "photos": 6,
       "hours": 9
+    },
+    {
+      "date": "16/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 4,
+      "state_workers_m": 17,
+      "state_workers_w": 19,
+      "state_workers_total": 36,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "งานผูกเหล็กคาน GB พื้นที่ WHA",
+        "งานผูกเหล็กฐานราก GL.8 พื้นที่ WHA",
+        "งานเทลีนคานGB GL.1 พื้นที่ WHA"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 9
+    },
+    {
+      "date": "17/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 23,
+      "state_workers_w": 22,
+      "state_workers_total": 96,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่น 1,3,6 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "งานเทคอนกรีตฐานรากGL.8 WHA",
+        "งานเทลีนฐานรากGL.8 WHB",
+        "งานผูกเหล็กคานGB พื้นที่ WHA GL.A’",
+        "งานworkshop เตรียมแบบหล่อเสาPrecast"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "18/08/26",
+      "shift": "Daily Report",
+      "weather": "Rainy (ฝนตก)",
+      "repco_personnel": 6,
+      "state_workers_m": 28,
+      "state_workers_w": 24,
+      "state_workers_total": 104,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ  2คัน",
+        "รถบรรทุกน้ำ 1คัน",
+        "รถJCB 1คัน",
+        "ปั้นจั่น 5คัน",
+        "รถเครน35ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ปั้นจั่น 1,3 ตอกเสาเข็ม I-26 พื้นที่ ROD",
+        "งานเทลีนคอนกรีตฐานรากGL.1 WHB",
+        "งานworkshop เตรียมแบบหล่อเสาPrecast",
+        "งานworkshop ผูกเหล็กเสาPrecast WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 9
+    },
+    {
+      "date": "19/08/26",
+      "shift": "Daily Report",
+      "weather": "Rainy (ฝนตก)",
+      "repco_personnel": 6,
+      "state_workers_m": 27,
+      "state_workers_w": 23,
+      "state_workers_total": 99,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ั่นจั่น 1 ตอกเสาเข็มI 26 พื้นที่ ROD",
+        "ั่นจั่น 3 ตอกเสาเข็มI 26 พื้นที่ ROD",
+        "ทฐานรากWHB,WHA",
+        "านผูกเหล็กเสา PRE CAST WHB",
+        "ข้าแบบเสา PRE CAST WHA"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 4,
+      "hours": 13
+    },
+    {
+      "date": "20/08/26",
+      "shift": "Daily Report",
+      "weather": "มีเมฆมาก",
+      "repco_personnel": 6,
+      "state_workers_m": 29,
+      "state_workers_w": 26,
+      "state_workers_total": 105,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJCB 1คัน",
+        "ปั่นจั่น 4 คัน"
+      ],
+      "activity_goals": [
+        "ั่นจั่น 1 ตอกเสาเข็มI 26 พื้นที่ ROD",
+        "ูกเหล็กคานWHA",
+        "านผูกเหล็กเสา PRE CAST WHB",
+        "ข้าแบบเสา PRE CAST WHB",
+        "ean ConcreteWHA",
+        "รับระดับพื้นTLB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 7,
+      "hours": 11
+    },
+    {
+      "date": "21/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 30,
+      "state_workers_w": 27,
+      "state_workers_total": 108,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "รับระดับฐานราก",
+        "ทฐานรากWHB",
+        "านผูกเหล็กเสา PRE CAST WHB",
+        "ข้าแบบเสา PRE CAST WHB",
+        "ข้าแบบเสา WHB",
+        "ทลีนคอนกรีต WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 8,
+      "hours": 11
+    },
+    {
+      "date": "22/08/26",
+      "shift": "Daily Report",
+      "weather": "Rainy (ฝนตก)",
+      "repco_personnel": 6,
+      "state_workers_m": 29,
+      "state_workers_w": 24,
+      "state_workers_total": 106,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "านผูกเหล็กเสา PRE CAST WHB",
+        "ข้าแบบเสา PRE CAST WHB",
+        "ข้าแบบตอม่อ WHB",
+        "ข้าแบบคานWHA",
+        "ูกเหล็กคานWHA"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 5,
+      "hours": 11
+    },
+    {
+      "date": "24/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 27,
+      "state_workers_w": 23,
+      "state_workers_total": 102,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "านผูกเหล็กเสา PRE CAST WHB",
+        "ข้าแบบเสา PRE CAST WHB",
+        "ข้าแบบคานWHA",
+        "ูกเหล็กคานWHA",
+        "ั่นจั่น1ตอกเวาเข็มภายนอกอาคาร",
+        "ั่นจั่น4ตอกเวาเข็มแซมภายนอกอาคาร",
+        "ั่นจั่น6ตอกเวาเข็มภายนอกอาคาร",
+        "ทคอนกรีตคานWHA"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 8,
+      "hours": 14
     }
   ]
 }
