@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_reports": 101,
+    "total_reports": 108,
     "date_range_start": "21/05/26",
-    "date_range_end": "24/08/26",
-    "total_photos": 361,
-    "avg_workers": 55.6,
-    "avg_equipment_types": 5.2
+    "date_range_end": "31/08/26",
+    "total_photos": 403,
+    "avg_workers": 58.1,
+    "avg_equipment_types": 5.3
   },
   "daily_reports": [
     {
@@ -2919,6 +2919,207 @@
       ],
       "photos": 8,
       "hours": 14
+    },
+    {
+      "date": "25/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 28,
+      "state_workers_w": 25,
+      "state_workers_total": 101,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ข้าแบบคาน WHA",
+        "้ายเหล็กเสา Pre Cast WHB ลงแบบ",
+        "ูกเหล็กคาน WHA",
+        "ทลีน คาน WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 0,
+      "hours": 14
+    },
+    {
+      "date": "26/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 23,
+      "state_workers_w": 24,
+      "state_workers_total": 92,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ั้นจั่น 1 ตอกเสาเข็ม ภายนอกอาคาร",
+        "ั้นจั่น 2 ตอกเสาเข็ม ภายนอกอาคาร",
+        "้ายเหล็กเสา Pre Cast WHB ลงแบบ",
+        "ูกเหล็กคาน WHB",
+        "ทคอรนกรีตคาน WHA"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 14
+    },
+    {
+      "date": "27/08/26",
+      "shift": "Daily Report",
+      "weather": "Cloudy (มีเมฆ)",
+      "repco_personnel": 6,
+      "state_workers_m": 23,
+      "state_workers_w": 24,
+      "state_workers_total": 94,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ข้าแบบคาน WHB",
+        "ูกเหล็กคาน WHA",
+        "ทคอนกรีตคาน  WHB",
+        "ั่นจั่น 1 ตอกเสาเข็มภายนอกอาคาร",
+        "ั่นจั่น 2 ตอกเสาเข็มภายนอกอาคาร",
+        "ูกเหล็กเสา Pre Cast WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 7,
+      "hours": 14
+    },
+    {
+      "date": "28/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 26,
+      "state_workers_w": 24,
+      "state_workers_total": 99,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ข้าแบบคาน WHA",
+        "ูกเหล็กคาน WHB",
+        "ทคอนกรีตเสา Pre Cast WHB",
+        "ั่นจั่น 1 ตอกเสาเข็มภายนอกอาคาร",
+        "ั่นจั่น 2 ตอกเสาเข็มภายนอกอาคาร",
+        "ูกเหล็กพื้นห้องน้ำ"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 7,
+      "hours": 14
+    },
+    {
+      "date": "29/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 26,
+      "state_workers_w": 25,
+      "state_workers_total": 98,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ั่นจั่น 2 ตอกเสาเข็มภายนอกอาคาร",
+        "ทคอนกรีตเสา Pre Cast WHB",
+        "ทคอนกรีตคานWHA",
+        "ูกเหล็กพื้นTLB",
+        "ทพื้น TLB",
+        "ข้าแบบคาน WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 10,
+      "hours": 10
+    },
+    {
+      "date": "30/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 23,
+      "state_workers_w": 26,
+      "state_workers_total": 87,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ข้าแบบคาน WHA",
+        "ิดเพลทเสา Pre Cast WHB",
+        "ูกเหล็กเสา Pre Cast WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 10
+    },
+    {
+      "date": "31/08/26",
+      "shift": "Daily Report",
+      "weather": "Sunny (ท้องฟ้าโปร่งใส)",
+      "repco_personnel": 6,
+      "state_workers_m": 23,
+      "state_workers_w": 26,
+      "state_workers_total": 87,
+      "equipment": [
+        "รถแทร็กเตอร์ 1คัน",
+        "รถแบ็คโฮ 2 คัน",
+        "รถบรรทุกน้ำ 1 คัน",
+        "รถJcd 1คัน",
+        "ปั่นจั่น 4 คัน",
+        "รถเครน 35 ตัน 1คัน"
+      ],
+      "activity_goals": [
+        "ข้าแบบคาน WHA",
+        "ิดเพลทเสา Pre Cast WHB",
+        "ูกเหล็กเสา Pre Cast WHB"
+      ],
+      "progress": [
+        ""
+      ],
+      "photos": 6,
+      "hours": 10
     }
   ]
 }
